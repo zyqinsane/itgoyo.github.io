@@ -1,0 +1,265 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vim的安装与使用 | 一个二货程序员的日常编码</title><meta name="keywords" content="Vim"><meta name="author" content="itgoyo"><meta name="copyright" content="itgoyo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="VimVim的配置以spf-13为例子项目地址:   https:&#x2F;&#x2F;github.com&#x2F;spf13&#x2F;spf13-vim Vim的安装 Linux, *nix, Mac OSX Installation  The easiest way to install spf13-vim is to use our automatic installer by simply copying and pas">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vim的安装与使用">
+<meta property="og:url" content="https://itgoyo.github.io/2017/11/03/Vim%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="一个二货程序员的日常编码">
+<meta property="og:description" content="VimVim的配置以spf-13为例子项目地址:   https:&#x2F;&#x2F;github.com&#x2F;spf13&#x2F;spf13-vim Vim的安装 Linux, *nix, Mac OSX Installation  The easiest way to install spf13-vim is to use our automatic installer by simply copying and pas">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png">
+<meta property="article:published_time" content="2017-11-03T08:55:29.000Z">
+<meta property="article:modified_time" content="2020-01-02T05:51:32.456Z">
+<meta property="article:author" content="itgoyo">
+<meta property="article:tag" content="Vim">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://itgoyo.github.io/2017/11/03/Vim%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-01-02 13:51:32'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://i.imgur.com/DnNifwH.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">78</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-user-secret"></i><span> Resume</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fas fa-folder-open"></i><span> 图库</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movies</span></a></div><div class="menus_item"><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> Books</span></a></div><div class="menus_item"><a class="site-page" href="/games/"><i class="fa-fw fab fa-steam"></i><span> Games</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">一个二货程序员的日常编码</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-user-secret"></i><span> Resume</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fas fa-folder-open"></i><span> 图库</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movies</span></a></div><div class="menus_item"><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> Books</span></a></div><div class="menus_item"><a class="site-page" href="/games/"><i class="fa-fw fab fa-steam"></i><span> Games</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Vim的安装与使用</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2017-11-03T08:55:29.000Z" title="发表于 2017-11-03 16:55:29">2017-11-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-01-02T05:51:32.456Z" title="更新于 2020-01-02 13:51:32">2020-01-02</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Vim/">Vim</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="Vim"><a href="#Vim" class="headerlink" title="Vim"></a>Vim</h2><h4 id="Vim的配置以spf-13为例子"><a href="#Vim的配置以spf-13为例子" class="headerlink" title="Vim的配置以spf-13为例子"></a>Vim的配置以spf-13为例子</h4><p>项目地址:   <a target="_blank" rel="noopener" href="https://github.com/spf13/spf13-vim">https://github.com/spf13/spf13-vim</a></p>
+<h4 id="Vim的安装"><a href="#Vim的安装" class="headerlink" title="Vim的安装"></a>Vim的安装</h4><ul>
+<li>Linux, *nix, Mac OSX Installation</li>
+</ul>
+<p>The easiest way to install spf13-vim is to use our automatic installer by simply copying and pasting the following line into a terminal. This will install spf13-vim and backup your existing vim configuration. If you are upgrading from a prior version (before 3.0) this is also the recommended installation.</p>
+<p>Requires Git 1.7+ and Vim 7.3+</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl https:&#x2F;&#x2F;j.mp&#x2F;spf13-vim3 -L &gt; spf13-vim.sh &amp;&amp; sh spf13-vim.sh</span><br></pre></td></tr></table></figure>
+<p>If you have a bash-compatible shell you can run the script directly:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh &lt;(curl https:&#x2F;&#x2F;j.mp&#x2F;spf13-vim3 -L)</span><br></pre></td></tr></table></figure>
+<p>此过程会比较长，包括插件的下载还有安装，这个过程将近1个多小时</p>
+<ul>
+<li>Installing on Windows</li>
+</ul>
+<p>On Windows and *nix Git and Curl are required. Also, if you haven’t done so already, you’ll need to install Vim. The quickest option to install all three dependencies (Git, Curl, Vim and spf13-vim) is via Chocolatey NuGet. After installing Chocolatey, execute the following commands on the command prompt:</p>
+<p>Install with cmd.exe(run as admin mode)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;iex ((New-Object System.Net.WebClient).DownloadString(&#39;https:&#x2F;&#x2F;chocolatey.org&#x2F;install.ps1&#39;))&quot; &amp;&amp; SET &quot;PATH&#x3D;%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&quot;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\&gt; choco install spf13-vim</span><br></pre></td></tr></table></figure>
+
+<p>一直Y，整个过程大概2h左右</p>
+<h2 id="Vim插件的介绍"><a href="#Vim插件的介绍" class="headerlink" title="Vim插件的介绍"></a>Vim插件的介绍</h2><ul>
+<li><h4 id="Vundle-The-best-plugin-manager"><a href="#Vundle-The-best-plugin-manager" class="headerlink" title="Vundle(The best plugin manager)"></a>Vundle(The best plugin manager)</h4></li>
+</ul>
+<p>Vundle is an excellent system built on the same principles as Pathogen, but with an integrated plugin management system that is Git and Github aware.</p>
+<p>spf13-vim uses the Vundle plugin management system to have a well organized vim directory (Similar to mac’s app folders). Vundle also ensures that the latest versions of your plugins are installed and makes it easy to keep them up to date.</p>
+<ul>
+<li><h4 id="NERDTree-file-navigation"><a href="#NERDTree-file-navigation" class="headerlink" title="NERDTree(file navigation)"></a>NERDTree(file navigation)</h4></li>
+</ul>
+<p>NERDTree is a file explorer plugin that provides “project drawer” functionality to your vim editing. You can learn more about it with :help NERDTree or checkout my post on NERDTree.</p>
+<p>Use <code>Ctrl+e</code> to toggle NERDTree</p>
+<ul>
+<li><h4 id="ctrlp-fast-file-finder"><a href="#ctrlp-fast-file-finder" class="headerlink" title="ctrlp(fast file finder)"></a>ctrlp(fast file finder)</h4></li>
+</ul>
+<p>Ctrlp replaces the Command-T plugin with a 100% viml plugin. It provides an intuitive and fast mechanism to load files from the file system (with regex and fuzzy find), from open buffers, and from recently used files.</p>
+<p>Use <code>Ctrl+p</code> to toggle Ctrlp</p>
+<ul>
+<li><h4 id="neocomplcache-autocomplete"><a href="#neocomplcache-autocomplete" class="headerlink" title="neocomplcache(autocomplete++)"></a>neocomplcache(autocomplete++)</h4></li>
+</ul>
+<p>NeoComplCache is an amazing autocomplete plugin with additional support for snippets. It can complete simulatiously from the dictionary, buffer, omnicomplete and snippets. This is the one true plugin that brings Vim autocomplete on par with the best editors.</p>
+<p>Use <code>Ctrl+n</code> to toggle neocomplcache</p>
+<ul>
+<li><h4 id="Tagbar-tag-generation-and-navigation"><a href="#Tagbar-tag-generation-and-navigation" class="headerlink" title="Tagbar(tag generation and navigation)"></a>Tagbar(tag generation and navigation)</h4></li>
+</ul>
+<p>spf13-vim includes the Tagbar plugin. This plugin requires exuberant-ctags and will automatically generate tags for your open files. It also provides a panel to navigate easily via tags</p>
+<p>Use <code>,tt</code> to toggle neocomplcache</p>
+<h4 id="关于在Mac端ctags无效的解决方法"><a href="#关于在Mac端ctags无效的解决方法" class="headerlink" title="关于在Mac端ctags无效的解决方法"></a>关于在Mac端ctags无效的解决方法</h4><p><a target="_blank" rel="noopener" href="https://brew.sh/">https://brew.sh/</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/universal-ctags/ctags">https://github.com/universal-ctags/ctags</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/universal-ctags/homebrew-universal-ctags">https://github.com/universal-ctags/homebrew-universal-ctags</a></p>
+<hr>
+<p>在Windows端，如果想切换到别的盘符进行操作的话,使用</p>
+<p><code>:NERDTree D:\\</code></p>
+<p>进行目录的跳转</p>
+<hr>
+<h4 id="Preview-To-preview-markdown-format-you-need-to-install-bluecloth-gem"><a href="#Preview-To-preview-markdown-format-you-need-to-install-bluecloth-gem" class="headerlink" title="Preview: To preview markdown format you need to install bluecloth gem"></a>Preview: To preview markdown format you need to install bluecloth gem</h4><p>在使用previewMarkdown的时候出现了<br><code>Preview: To preview markdown format you need to install bluecloth gem</code></p>
+<p>解决方法：</p>
+<ul>
+<li><p><code>sudo gem install redcarpet</code></p>
+</li>
+<li><p><code>sudo gem install bluecloth</code></p>
+</li>
+</ul>
+<h4 id="Linux出现的问题"><a href="#Linux出现的问题" class="headerlink" title="Linux出现的问题"></a>Linux出现的问题</h4><p>can’t find header files for ruby at /usr/lib/ruby/include/ruby.h</p>
+<p>解决方法:sudo apt-get install ruby-dev</p>
+<h3 id="提示找不到tag文件"><a href="#提示找不到tag文件" class="headerlink" title="提示找不到tag文件"></a>提示找不到tag文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">用法:</span><br><span class="line">    1.生成标签文件(cmd到项目的目录中执行)</span><br><span class="line">        在当前目录下(运行$提示符后面的命令):</span><br><span class="line">        $ctags -R .</span><br><span class="line">      -R表示recursive，递归,为当前目录及其子目录中的c文件生成标签文件。最后一个.表示在当前目录。</span><br><span class="line">        运行完当前目录会多一个文件tags,就是c标签的索引文件。</span><br><span class="line">    2.跳转</span><br><span class="line">        1)用vim打开一个已经建过标签的c文件</span><br><span class="line">        2)ctrl+] 找到光标所在位置的标签定义的地方</span><br><span class="line">        3)ctrl+t 回到跳转之前的标签处</span><br><span class="line">    3.窗口显示方法</span><br><span class="line">         命令Tagbar toggle打开相应的方法窗口显示</span><br><span class="line">    注意：此时运行vim，必须在&quot;tags&quot;文件所在的目录下运行。否则，运行它会找不到&quot;tags&quot;文件，而需要在vim中用&quot;:set tags&#x3D;&quot;命令设定&quot;tags&quot;文件的路径。对于一个稍微大点的项目，你可能在任何一个目录下打开vim，然而在每个目录下都生成一个tags文件并不 是个好主意，那么如何解决呢？方法是在.vimrc中增加一行：</span><br><span class="line">        set tags&#x3D;tags;&#x2F;</span><br><span class="line">    这是告诉vim在当前目录找不到tags文件时请到上层目录查找。</span><br></pre></td></tr></table></figure>
+<h4 id="窗口切换快捷键"><a href="#窗口切换快捷键" class="headerlink" title="窗口切换快捷键"></a>窗口切换快捷键</h4><p><code>Ctrl+w+w</code></p>
+<h4 id="关闭分屏"><a href="#关闭分屏" class="headerlink" title="关闭分屏"></a>关闭分屏</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">关闭当前窗口。</span><br><span class="line">Ctrl+W c</span><br><span class="line">关闭当前窗口，如果只剩最后一个了，则退出Vim。</span><br><span class="line">Ctrl+W q</span><br></pre></td></tr></table></figure>
+<h4 id="打开多个窗口了之后，怎么快速切换"><a href="#打开多个窗口了之后，怎么快速切换" class="headerlink" title="打开多个窗口了之后，怎么快速切换"></a>打开多个窗口了之后，怎么快速切换</h4><p><code>:buffers 列表  :bn下一个 :bp 上一个  :b17</code></p>
+<h4 id="取消查找遗留的边框"><a href="#取消查找遗留的边框" class="headerlink" title="取消查找遗留的边框"></a>取消查找遗留的边框</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set: nohlseach</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<hr>
+<div align=center>
+
+<pre><code>    发现更多更好玩的，欢迎关注我的微信公众号:&lt;span style=&#39;color:red;&#39;&gt; FullStacker &lt;/span&gt;&lt;br /&gt;
+    &lt;img src=&quot;/img/fullstacker.jpg&quot;
+        height=&quot;400px&quot; width=&quot;400px&quot; /&gt;
+&lt;/div&gt;
+</code></pre>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">itgoyo</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://itgoyo.github.io/2017/11/03/Vim%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">https://itgoyo.github.io/2017/11/03/Vim%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://itgoyo.github.io" target="_blank">一个二货程序员的日常编码</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Vim/">Vim</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2017/11/03/Oh-My-Zsh/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Oh-My-Zsh</div></div></a></div><div class="next-post pull-right"><a href="/2017/10/22/%E8%A7%A3%E5%86%B3Alfred%E6%AF%8F%E6%AC%A1%E9%83%BD%E8%AE%BF%E9%97%AE%E9%80%9A%E8%AE%AF%E5%BD%95%E7%9A%84%E9%97%AE%E9%A2%98/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">解决Alfred每次都访问通讯录的问题</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2019/04/09/Vim安装Markdown预览插件markdown-preview-vim/" title="Vim安装Markdown预览插件markdown-preview.vim"><img class="cover" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-04-09</div><div class="title">Vim安装Markdown预览插件markdown-preview.vim</div></div></a></div><div><a href="/2018/04/11/Vim安装翻译插件出现的问题/" title="Vim安装翻译插件出现的问题"><img class="cover" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2018-04-11</div><div class="title">Vim安装翻译插件出现的问题</div></div></a></div><div><a href="/2018/03/24/Vim所遇到的各种坑/" title="Vim所遇到的各种坑"><img class="cover" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2018-03-24</div><div class="title">Vim所遇到的各种坑</div></div></a></div><div><a href="/2019/07/12/Vim编辑器insert切换回normal延迟卡顿的问题/" title="Vim编辑器insert切换回normal延迟卡顿的问题"><img class="cover" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-07-12</div><div class="title">Vim编辑器insert切换回normal延迟卡顿的问题</div></div></a></div><div><a href="/2018/02/09/Vim常用快捷键大全/" title="Vim常用快捷键大全"><img class="cover" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2018-02-09</div><div class="title">Vim常用快捷键大全</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://i.imgur.com/DnNifwH.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">itgoyo</div><div class="author-info__description">出生不及赵甲第，努力应过陈浮生</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">78</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/itgoyo"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/itgoyo" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://www.instagram.com/itgoyo1991" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a><a class="social-icon" href="mailto:itgoyo@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://twitter.com/itgoyo" target="_blank" title=""><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.zhihu.com/people/mkosto" target="_blank" title=""><i class="fab fa-zhihu"></i></a><a class="social-icon" href="https://www.youtube.com/channel/UCpCzS_uKS1zzOAUjuuBNXDQ" target="_blank" title=""><i class="fab fa-youtube"></i></a><a class="social-icon" href="https://space.bilibili.com/12767066" target="_blank" title=""><i class="fas fa-film"></i></a><a class="social-icon" href="https://steamcommunity.com/id/itgoyo/" target="_blank" title=""><i class="fab fa-steam"></i></a><a class="social-icon" href="https://weibo.com/5459991185/profile" target="_blank" title=""><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://itgoyo.github.io/atom.xml" target="_blank" title=""><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎关注本人公众号：fullstacker <img class=" lazyloaded" data-src="/img/fullstacker.jpg" onerror="onerror=null,src=&quot;/img/friend_404.gif&quot;" width="180px" style="display:block;margin:0 auto" src="/img/fullstacker.jpg"></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vim"><span class="toc-number">1.</span> <span class="toc-text">Vim</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Vim%E7%9A%84%E9%85%8D%E7%BD%AE%E4%BB%A5spf-13%E4%B8%BA%E4%BE%8B%E5%AD%90"><span class="toc-number">1.0.1.</span> <span class="toc-text">Vim的配置以spf-13为例子</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Vim%E7%9A%84%E5%AE%89%E8%A3%85"><span class="toc-number">1.0.2.</span> <span class="toc-text">Vim的安装</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vim%E6%8F%92%E4%BB%B6%E7%9A%84%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.</span> <span class="toc-text">Vim插件的介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Vundle-The-best-plugin-manager"><span class="toc-number">2.0.1.</span> <span class="toc-text">Vundle(The best plugin manager)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#NERDTree-file-navigation"><span class="toc-number">2.0.2.</span> <span class="toc-text">NERDTree(file navigation)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ctrlp-fast-file-finder"><span class="toc-number">2.0.3.</span> <span class="toc-text">ctrlp(fast file finder)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#neocomplcache-autocomplete"><span class="toc-number">2.0.4.</span> <span class="toc-text">neocomplcache(autocomplete++)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tagbar-tag-generation-and-navigation"><span class="toc-number">2.0.5.</span> <span class="toc-text">Tagbar(tag generation and navigation)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E5%9C%A8Mac%E7%AB%AFctags%E6%97%A0%E6%95%88%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-number">2.0.6.</span> <span class="toc-text">关于在Mac端ctags无效的解决方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Preview-To-preview-markdown-format-you-need-to-install-bluecloth-gem"><span class="toc-number">2.0.7.</span> <span class="toc-text">Preview: To preview markdown format you need to install bluecloth gem</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Linux%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">2.0.8.</span> <span class="toc-text">Linux出现的问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0tag%E6%96%87%E4%BB%B6"><span class="toc-number">2.1.</span> <span class="toc-text">提示找不到tag文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AA%97%E5%8F%A3%E5%88%87%E6%8D%A2%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">2.1.1.</span> <span class="toc-text">窗口切换快捷键</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%97%AD%E5%88%86%E5%B1%8F"><span class="toc-number">2.1.2.</span> <span class="toc-text">关闭分屏</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E7%AA%97%E5%8F%A3%E4%BA%86%E4%B9%8B%E5%90%8E%EF%BC%8C%E6%80%8E%E4%B9%88%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2"><span class="toc-number">2.1.3.</span> <span class="toc-text">打开多个窗口了之后，怎么快速切换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%96%E6%B6%88%E6%9F%A5%E6%89%BE%E9%81%97%E7%95%99%E7%9A%84%E8%BE%B9%E6%A1%86"><span class="toc-number">2.1.4.</span> <span class="toc-text">取消查找遗留的边框</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/11/05/%E5%A6%82%E4%BD%95%E8%AE%A9%E5%88%AB%E4%BA%BA%E5%AF%B9%E4%BA%A4%E4%BB%A3%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%8B%E6%83%85%E5%81%9A%E5%88%B0%E6%94%BE%E5%BF%83%EF%BC%9F/" title="如何让别人对交代给自己的事情做到放心？"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何让别人对交代给自己的事情做到放心？"/></a><div class="content"><a class="title" href="/2020/11/05/%E5%A6%82%E4%BD%95%E8%AE%A9%E5%88%AB%E4%BA%BA%E5%AF%B9%E4%BA%A4%E4%BB%A3%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%8B%E6%83%85%E5%81%9A%E5%88%B0%E6%94%BE%E5%BF%83%EF%BC%9F/" title="如何让别人对交代给自己的事情做到放心？">如何让别人对交代给自己的事情做到放心？</a><time datetime="2020-11-05T15:00:08.000Z" title="发表于 2020-11-05 23:00:08">2020-11-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/04/RSS%E6%89%93%E5%BC%80%E6%96%B0%E4%B8%96%E7%95%8C%E7%9A%84%E5%A4%A7%E9%97%A8/" title="RSS打开新世界的大门"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RSS打开新世界的大门"/></a><div class="content"><a class="title" href="/2020/11/04/RSS%E6%89%93%E5%BC%80%E6%96%B0%E4%B8%96%E7%95%8C%E7%9A%84%E5%A4%A7%E9%97%A8/" title="RSS打开新世界的大门">RSS打开新世界的大门</a><time datetime="2020-11-04T14:21:03.000Z" title="发表于 2020-11-04 22:21:03">2020-11-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/03/05/%E6%9C%89%E5%93%AA%E4%BA%9B%E5%86%B7%E9%97%A8%E4%BD%86%E6%98%AF%E9%9D%9E%E5%B8%B8%E5%80%BC%E5%BE%97%E6%8E%A8%E8%8D%90%E7%9A%84%E8%BD%AF%E4%BB%B6%EF%BC%9F/" title="有哪些冷门但是非常值得推荐的软件？"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="有哪些冷门但是非常值得推荐的软件？"/></a><div class="content"><a class="title" href="/2020/03/05/%E6%9C%89%E5%93%AA%E4%BA%9B%E5%86%B7%E9%97%A8%E4%BD%86%E6%98%AF%E9%9D%9E%E5%B8%B8%E5%80%BC%E5%BE%97%E6%8E%A8%E8%8D%90%E7%9A%84%E8%BD%AF%E4%BB%B6%EF%BC%9F/" title="有哪些冷门但是非常值得推荐的软件？">有哪些冷门但是非常值得推荐的软件？</a><time datetime="2020-03-05T04:28:03.000Z" title="发表于 2020-03-05 12:28:03">2020-03-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/01/19/Docker%E5%AE%B9%E5%99%A8%E9%80%A0%E5%8C%96%E9%92%9F%E7%A5%9E%E7%A7%80/" title="Docker容器造化钟神秀"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker容器造化钟神秀"/></a><div class="content"><a class="title" href="/2020/01/19/Docker%E5%AE%B9%E5%99%A8%E9%80%A0%E5%8C%96%E9%92%9F%E7%A5%9E%E7%A7%80/" title="Docker容器造化钟神秀">Docker容器造化钟神秀</a><time datetime="2020-01-19T03:48:50.000Z" title="发表于 2020-01-19 11:48:50">2020-01-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/01/17/Tmux%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="Tmux的使用教程"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Tmux的使用教程"/></a><div class="content"><a class="title" href="/2020/01/17/Tmux%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="Tmux的使用教程">Tmux的使用教程</a><time datetime="2020-01-17T07:34:00.000Z" title="发表于 2020-01-17 15:34:00">2020-01-17</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By itgoyo</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    let initData = {
+      el: '#vcomment',
+      appId: 'HzQ14MvDJNcJ4Y73LGzWkuKD-gzGzoHsz',
+      appKey: 'gPggWGa1wwwhXbzuhnSQyQDx',
+      placeholder: 'Please leave your footprints',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+    
+    if (false) {
+      const otherData = false
+      initData = Object.assign(initData, otherData)
+    }
+    
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
