@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Python列表和元组的详细区别 | 一个二货程序员的日常编码</title><meta name="keywords" content="Python"><meta name="author" content="itgoyo"><meta name="copyright" content="itgoyo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="Python 列表和元组的详细区别一、列表和元组的区别列表是动态数组，它们不可变且可以重设长度（改变其内部元素的个数）。元组是静态数组，它们不可变，且其内部数据一旦创建便无法改变。元组缓存于 Python 运行时环境，这意味着我们每次使用元组时无须访问内核去分配内存。这些区别结实率两者在设计哲学上的不同： 列表可被用于保存多个互相独立对象的数据集合元组用于描述一个不会改不安的事务的多个属性二、列">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python列表和元组的详细区别">
+<meta property="og:url" content="https://itgoyo.github.io/2019/09/27/Python%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84%E7%9A%84%E8%AF%A6%E7%BB%86%E5%8C%BA%E5%88%AB/index.html">
+<meta property="og:site_name" content="一个二货程序员的日常编码">
+<meta property="og:description" content="Python 列表和元组的详细区别一、列表和元组的区别列表是动态数组，它们不可变且可以重设长度（改变其内部元素的个数）。元组是静态数组，它们不可变，且其内部数据一旦创建便无法改变。元组缓存于 Python 运行时环境，这意味着我们每次使用元组时无须访问内核去分配内存。这些区别结实率两者在设计哲学上的不同： 列表可被用于保存多个互相独立对象的数据集合元组用于描述一个不会改不安的事务的多个属性二、列">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png">
+<meta property="article:published_time" content="2019-09-27T01:43:57.000Z">
+<meta property="article:modified_time" content="2019-09-27T01:47:09.395Z">
+<meta property="article:author" content="itgoyo">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://itgoyo.github.io/2019/09/27/Python%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84%E7%9A%84%E8%AF%A6%E7%BB%86%E5%8C%BA%E5%88%AB/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Python列表和元组的详细区别',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2019-09-27 09:47:09'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.imgur.com/DnNifwH.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">78</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-user-secret"></i><span> Resume</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fas fa-folder-open"></i><span> 图库</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movies</span></a></div><div class="menus_item"><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> Books</span></a></div><div class="menus_item"><a class="site-page" href="/games/"><i class="fa-fw fab fa-steam"></i><span> Games</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">一个二货程序员的日常编码</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-user-secret"></i><span> Resume</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fas fa-folder-open"></i><span> 图库</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movies</span></a></div><div class="menus_item"><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> Books</span></a></div><div class="menus_item"><a class="site-page" href="/games/"><i class="fa-fw fab fa-steam"></i><span> Games</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Python列表和元组的详细区别</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-09-27T01:43:57.000Z" title="发表于 2019-09-27 09:43:57">2019-09-27</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2019-09-27T01:47:09.395Z" title="更新于 2019-09-27 09:47:09">2019-09-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Python/">Python</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Python列表和元组的详细区别"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><script src="/assets/js/APlayer.min.js"> </script><p>Python 列表和元组的详细区别<br>一、列表和元组的区别<br>列表是动态数组，它们不可变且可以重设长度（改变其内部元素的个数）。<br>元组是静态数组，它们不可变，且其内部数据一旦创建便无法改变。<br>元组缓存于 Python 运行时环境，这意味着我们每次使用元组时无须访问内核去分配内存。<br>这些区别结实率两者在设计哲学上的不同：</p>
+<p>列表可被用于保存多个互相独立对象的数据集合<br>元组用于描述一个不会改不安的事务的多个属性<br>二、列表（List）<br>列表一旦创建了我们就可以根据自己的需要随意改变它的内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; l &#x3D; [1, 2, 3, 4, 5, 6]</span><br><span class="line">&gt;&gt;&gt; l[0] &#x3D; l[2] * l[3]</span><br><span class="line">&gt;&gt;&gt; l</span><br><span class="line">[12, 2, 3, 4, 5, 6]</span><br></pre></td></tr></table></figure>
+
+<p>另外我们可以给列边添加新的数据来增加其大小：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; len(l)</span><br><span class="line">6</span><br><span class="line">&gt;&gt;&gt; l.append(7)</span><br><span class="line">&gt;&gt;&gt; l</span><br><span class="line">[12, 2, 3, 4, 5, 6, 7]</span><br><span class="line">&gt;&gt;&gt; len(l)</span><br><span class="line">7</span><br></pre></td></tr></table></figure>
+<p>这是因为动态数组支持 resize 操作，可以增加数组的容量。当一个大小为 N 的列表第一次需要添加数据时，Python 会创建一个新的列表，足够放原来的 N 个元素以及额外添加的元素。不过，实际分配的并不是 N+1 个元素，而是 M 个元素，M &gt; N, 这是为了给未来的添加预留空间。然后旧列表的数据被复制到新列表中，旧列表则会被销毁。从设计理念上来说，第一次添加可能是后续多次添加的开始，通过预留空间的做法，我们就可以减少这一分配空间的操作次数以及内存复制的次数。这点非常重要，因为内存复制可能非常的昂贵，特别是当列表大小开始增长以后。</p>
+<p>三、元组（Tuple）<br>元组是固定且不可改变的。这意味着一旦元组被创建，和列表不同，它的内容无法被修改或它的大小也无法被改变。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; t &#x3D; (1, 2, 3, 4)</span><br><span class="line">&gt;&gt;&gt; t[0] &#x3D; 5</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;</span><br><span class="line">TypeError: &#39;tuple&#39; object does not support item assignment</span><br></pre></td></tr></table></figure>
+<p>虽然它们不支持改变大小，但是我们可以将两个元组合并成一个新元组。这一操作类似列表的 resize 操作，但我们不需要为新生的元组分配任何额外的空间：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; t1 &#x3D; (1, 2, 3, 4)</span><br><span class="line">&gt;&gt;&gt; t2 &#x3D; (5, 6, 7, 8)</span><br><span class="line">&gt;&gt;&gt; t1 + t2</span><br><span class="line">(1, 2, 3, 4, 5, 6, 7, 8)</span><br></pre></td></tr></table></figure>
+<p>如果我们将其与列表的 append 操作比较，我们会看到它的复杂度是 O (n) 而不是列表的 O (1)。这是因为对元组每添加一个新元素都会有分配和复制操作，而不是像列表那样仅在额外的空间耗尽时发生。所以元组并没有提供一个类似 append 的自增操作，任意两个元组相加始终返回一个新分配的元组。</p>
+<p>该网站为 Python Tutor, 一个能够对 python 运行内存可视化的网站，非常适合初学者研究，在运行过程中内存发生了什么。</p>
+<p>元组的静态特性的另一个好处体现在一些会在 Python 后台发生的事情：资源缓存。</p>
+<p>Python 是一门垃圾收集语言，这意味着当一个变量不再被使用时，Python 会将该变量使用的内存释放回操作系统，以供其他程序（变量）使用。然而，对于长度为 1~20 的元组，即使它们不在被使用，它们的空间也不会立刻还给系统，而是留待未来使用。这意味着当未来需要一个同样大小的新的元组时，我们不再需要向操作系统申请一块内存来存放数据，因为我们已经有了预留的空间。</p>
+<p>这看上去可能是个细微的好处，但是实际上是元组一个很神奇的地方：它们可以被轻松快速地创建，因为它们可以避免跟操作系统频繁的打交道，而后者会花很长的时间。</p>
+<p>下面举个例子会非常直观的说明问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">In [1]: %timeit l &#x3D; [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span><br><span class="line">93.7 ns ± 3.33 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)</span><br><span class="line"></span><br><span class="line">In [2]: %timeit t &#x3D; (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)</span><br><span class="line">18.5 ns ± 1.19 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)</span><br></pre></td></tr></table></figure>
+<p>上面的示例中显示了初始化一个列表比初始化一个元组慢了 5.1 倍 —— 如果这是在一个循环中，这点差别会很快的累加起来。</p>
+<hr>
+<div align=center>
+发现更多更好玩的，欢迎关注我的微信公众号:fullstacker
+
+<p><img src="/img/qrcode.jpg"></p>
+</div>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">itgoyo</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://itgoyo.github.io/2019/09/27/Python%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84%E7%9A%84%E8%AF%A6%E7%BB%86%E5%8C%BA%E5%88%AB/">https://itgoyo.github.io/2019/09/27/Python%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84%E7%9A%84%E8%AF%A6%E7%BB%86%E5%8C%BA%E5%88%AB/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://itgoyo.github.io" target="_blank">一个二货程序员的日常编码</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Python/">Python</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2019/10/30/%E9%A9%B1%E5%8A%A8%E5%87%BA%E7%8E%B0%E7%9A%84%E9%BB%91%E5%B1%8F%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">驱动出现的黑屏各种问题和解决方式</div></div></a></div><div class="next-post pull-right"><a href="/2019/09/26/Python%E5%9F%BA%E7%A1%80%E4%B8%80/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Python基础一</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2019/09/26/Python基础一/" title="Python基础一"><img class="cover" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-09-26</div><div class="title">Python基础一</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.imgur.com/DnNifwH.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">itgoyo</div><div class="author-info__description">出生不及赵甲第，努力应过陈浮生</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">78</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div><a class="button--animated" id="card-info-btn" href="https://github.com/itgoyo"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/itgoyo" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://www.instagram.com/itgoyo1991" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a><a class="social-icon" href="mailto:itgoyo@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://twitter.com/itgoyo" target="_blank" title=""><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.zhihu.com/people/mkosto" target="_blank" title=""><i class="fab fa-zhihu"></i></a><a class="social-icon" href="https://www.youtube.com/channel/UCpCzS_uKS1zzOAUjuuBNXDQ" target="_blank" title=""><i class="fab fa-youtube"></i></a><a class="social-icon" href="https://space.bilibili.com/12767066" target="_blank" title=""><i class="fas fa-film"></i></a><a class="social-icon" href="https://steamcommunity.com/id/itgoyo/" target="_blank" title=""><i class="fab fa-steam"></i></a><a class="social-icon" href="https://weibo.com/5459991185/profile" target="_blank" title=""><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://itgoyo.github.io/atom.xml" target="_blank" title=""><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎关注本人公众号：fullstacker <img class=" lazyloaded" data-src="/img/fullstacker.jpg" onerror="onerror=null,src=&quot;/img/friend_404.gif&quot;" width="180px" style="display:block;margin:0 auto" src="/img/fullstacker.jpg"></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/11/05/%E5%A6%82%E4%BD%95%E8%AE%A9%E5%88%AB%E4%BA%BA%E5%AF%B9%E4%BA%A4%E4%BB%A3%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%8B%E6%83%85%E5%81%9A%E5%88%B0%E6%94%BE%E5%BF%83%EF%BC%9F/" title="如何让别人对交代给自己的事情做到放心？"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210724205710.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何让别人对交代给自己的事情做到放心？"/></a><div class="content"><a class="title" href="/2020/11/05/%E5%A6%82%E4%BD%95%E8%AE%A9%E5%88%AB%E4%BA%BA%E5%AF%B9%E4%BA%A4%E4%BB%A3%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%8B%E6%83%85%E5%81%9A%E5%88%B0%E6%94%BE%E5%BF%83%EF%BC%9F/" title="如何让别人对交代给自己的事情做到放心？">如何让别人对交代给自己的事情做到放心？</a><time datetime="2020-11-05T15:00:08.000Z" title="发表于 2020-11-05 23:00:08">2020-11-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/04/RSS%E6%89%93%E5%BC%80%E6%96%B0%E4%B8%96%E7%95%8C%E7%9A%84%E5%A4%A7%E9%97%A8/" title="RSS打开新世界的大门"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210724210420.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RSS打开新世界的大门"/></a><div class="content"><a class="title" href="/2020/11/04/RSS%E6%89%93%E5%BC%80%E6%96%B0%E4%B8%96%E7%95%8C%E7%9A%84%E5%A4%A7%E9%97%A8/" title="RSS打开新世界的大门">RSS打开新世界的大门</a><time datetime="2020-11-04T14:21:03.000Z" title="发表于 2020-11-04 22:21:03">2020-11-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/03/05/%E6%9C%89%E5%93%AA%E4%BA%9B%E5%86%B7%E9%97%A8%E4%BD%86%E6%98%AF%E9%9D%9E%E5%B8%B8%E5%80%BC%E5%BE%97%E6%8E%A8%E8%8D%90%E7%9A%84%E8%BD%AF%E4%BB%B6%EF%BC%9F/" title="有哪些冷门但是非常值得推荐的软件？"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210724211407.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="有哪些冷门但是非常值得推荐的软件？"/></a><div class="content"><a class="title" href="/2020/03/05/%E6%9C%89%E5%93%AA%E4%BA%9B%E5%86%B7%E9%97%A8%E4%BD%86%E6%98%AF%E9%9D%9E%E5%B8%B8%E5%80%BC%E5%BE%97%E6%8E%A8%E8%8D%90%E7%9A%84%E8%BD%AF%E4%BB%B6%EF%BC%9F/" title="有哪些冷门但是非常值得推荐的软件？">有哪些冷门但是非常值得推荐的软件？</a><time datetime="2020-03-05T04:28:03.000Z" title="发表于 2020-03-05 12:28:03">2020-03-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/01/19/Docker%E5%AE%B9%E5%99%A8%E9%80%A0%E5%8C%96%E9%92%9F%E7%A5%9E%E7%A7%80/" title="Docker容器造化钟神秀"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210725171907.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker容器造化钟神秀"/></a><div class="content"><a class="title" href="/2020/01/19/Docker%E5%AE%B9%E5%99%A8%E9%80%A0%E5%8C%96%E9%92%9F%E7%A5%9E%E7%A7%80/" title="Docker容器造化钟神秀">Docker容器造化钟神秀</a><time datetime="2020-01-19T03:48:50.000Z" title="发表于 2020-01-19 11:48:50">2020-01-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/01/17/Tmux%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="Tmux的使用教程"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210724211941.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Tmux的使用教程"/></a><div class="content"><a class="title" href="/2020/01/17/Tmux%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="Tmux的使用教程">Tmux的使用教程</a><time datetime="2020-01-17T07:34:00.000Z" title="发表于 2020-01-17 15:34:00">2020-01-17</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210205144322.png')"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2021 By itgoyo</div><div class="framework-info"><span>框架 </span><a href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'HzQ14MvDJNcJ4Y73LGzWkuKD-gzGzoHsz',
+      appKey: 'gPggWGa1wwwhXbzuhnSQyQDx',
+      placeholder: 'Please leave your footprints',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+      requiredFields: ["nick,mail"],
+      visitor: 
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

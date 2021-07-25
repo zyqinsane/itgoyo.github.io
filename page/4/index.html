@@ -1,0 +1,231 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>一个二货程序员的日常编码 - Talk is cheap,Show me the girl.</title><meta name="author" content="itgoyo"><meta name="copyright" content="itgoyo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="出生不及赵甲第，努力应过陈浮生">
+<meta property="og:type" content="website">
+<meta property="og:title" content="一个二货程序员的日常编码">
+<meta property="og:url" content="https://itgoyo.github.io/page/4/index.html">
+<meta property="og:site_name" content="一个二货程序员的日常编码">
+<meta property="og:description" content="出生不及赵甲第，努力应过陈浮生">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.imgur.com/DnNifwH.png">
+<meta property="article:author" content="itgoyo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.imgur.com/DnNifwH.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://itgoyo.github.io/page/4/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '一个二货程序员的日常编码',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-07-25 18:06:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.imgur.com/DnNifwH.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">78</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-user-secret"></i><span> Resume</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fas fa-folder-open"></i><span> 图库</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movies</span></a></div><div class="menus_item"><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> Books</span></a></div><div class="menus_item"><a class="site-page" href="/games/"><i class="fa-fw fab fa-steam"></i><span> Games</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7210c91c-1c2a-47fb-bb38-07ed640beb36/dcpqkan-4ec95fb5-6ba1-4909-8b8c-15c8ed50b864.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNzIxMGM5MWMtMWMyYS00N2ZiLWJiMzgtMDdlZDY0MGJlYjM2XC9kY3Bxa2FuLTRlYzk1ZmI1LTZiYTEtNDkwOS04YjhjLTE1YzhlZDUwYjg2NC5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.mJ8MJ79S5Dem9_s-ACvoiYRLf2ZTDG1PZBe1aj-8GGE')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">一个二货程序员的日常编码</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-user-secret"></i><span> Resume</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fas fa-folder-open"></i><span> 图库</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movies</span></a></div><div class="menus_item"><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> Books</span></a></div><div class="menus_item"><a class="site-page" href="/games/"><i class="fa-fw fab fa-steam"></i><span> Games</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">一个二货程序员的日常编码</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/itgoyo" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://www.instagram.com/itgoyo1991" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a><a class="social-icon" href="mailto:itgoyo@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://twitter.com/itgoyo" target="_blank" title=""><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.zhihu.com/people/mkosto" target="_blank" title=""><i class="fab fa-zhihu"></i></a><a class="social-icon" href="https://www.youtube.com/channel/UCpCzS_uKS1zzOAUjuuBNXDQ" target="_blank" title=""><i class="fab fa-youtube"></i></a><a class="social-icon" href="https://space.bilibili.com/12767066" target="_blank" title=""><i class="fas fa-film"></i></a><a class="social-icon" href="https://steamcommunity.com/id/itgoyo/" target="_blank" title=""><i class="fab fa-steam"></i></a><a class="social-icon" href="https://weibo.com/5459991185/profile" target="_blank" title=""><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://itgoyo.github.io/atom.xml" target="_blank" title=""><i class="fas fa-rss"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/07/10/%E6%9D%8E%E7%AC%91%E6%9D%A5%E5%85%A8%E6%A0%88%E8%90%A5%E5%BC%80%E5%AD%A6%E5%85%B8%E7%A4%BC%E4%B8%8A%E9%9D%A2%E7%9A%84%E6%BC%94%E8%AE%B2%E6%B1%87%E6%80%BB/" title="李笑来全栈营开学典礼上面的演讲汇总">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="李笑来全栈营开学典礼上面的演讲汇总"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/07/10/%E6%9D%8E%E7%AC%91%E6%9D%A5%E5%85%A8%E6%A0%88%E8%90%A5%E5%BC%80%E5%AD%A6%E5%85%B8%E7%A4%BC%E4%B8%8A%E9%9D%A2%E7%9A%84%E6%BC%94%E8%AE%B2%E6%B1%87%E6%80%BB/" title="李笑来全栈营开学典礼上面的演讲汇总">李笑来全栈营开学典礼上面的演讲汇总</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-07-10T01:47:23.000Z" title="发表于 2019-07-10 09:47:23">2019-07-10</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E7%A8%8B%E7%9B%B8%E5%85%B3/">编程相关</a></span></div><div class="content"> 全栈不是让你全部都精通，而是懂的去组合。懂得如何去解决问题
+要有自己的想法
+值得购买的想法很难，简直就是万里挑一
+有效沟通：交换有价值能让你学到新东西
+新东方写作课上面，刻苦地改同学们的写作，各类错误语法都见识过
+学会教别人
+分享成果走得更远、发展更好
+能省时间的地方赶紧用钱解决掉，用时间去挣更多的钱
+提取练习
+当要复习时，禁止打开课本重点与笔记
+拿一张全新的白纸回想到之前划了哪些重点以及为什么要划这些重点写下来
+打开当初的课本重点与‘回想笔记’对照叫提取练习，此法记忆非常牢
+
+
+
+发现更多更好玩的，欢迎关注我的微信公众号:
+
+
+
+
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/07/09/%E6%9C%BA%E7%BC%98%E5%B7%A7%E5%90%88%E4%B8%8B%E7%9C%8B%E5%88%B0%E4%BA%86%E6%9D%8E%E7%AC%91%E6%9D%A5%E7%9A%84%E5%85%A8%E6%A0%88%E8%90%A5/" title="机缘巧合下看到了李笑来的全栈营">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="机缘巧合下看到了李笑来的全栈营"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/07/09/%E6%9C%BA%E7%BC%98%E5%B7%A7%E5%90%88%E4%B8%8B%E7%9C%8B%E5%88%B0%E4%BA%86%E6%9D%8E%E7%AC%91%E6%9D%A5%E7%9A%84%E5%85%A8%E6%A0%88%E8%90%A5/" title="机缘巧合下看到了李笑来的全栈营">机缘巧合下看到了李笑来的全栈营</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-07-09T10:37:15.000Z" title="发表于 2019-07-09 18:37:15">2019-07-09</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E7%A8%8B%E7%9B%B8%E5%85%B3/">编程相关</a></span></div><div class="content"> 由于个人的职业发展规划是偏向于全栈这个方向，所以在网上尝试找一些全栈相关的视频来提升自己的能力。意外发现了李笑来的全栈营视频。现在已经是9102年了，网上的视频还是在17年左右的时候，我也知道李笑来和 Xdite的撕逼大战，但是我觉得这个系列的视频还是有很多值得我去学习的地方。我之前也看过一个叫 laioffer 的视频，这个培训机构培训的对象都是北美程序员的居多，然后老师上课的方式给我很大的触动，也可能是因为外文的原因，又或者讲课方式比较发散，所以我个人比较喜欢这种类型的视频，而不是国内市面上的培训机构（类似某马，某硅谷）上来就给你讲代码。
+百度搜关于全栈营的时候也发现真实参与此课程的一些小伙伴，也写了自己在改学习期间的一些见解还有一些感悟，我稍微看了一些感觉写得都挺好的，我觉得每天如果想要过得充实一些的话，也应该向他们学习，学习他们那种求知的态度，或者是即便是开发好几年，也想着不断地提高自己的能力，以应对未来的需求。
+我想我现在缺少的就是这种拼命的劲头，每天上班都是浑浑噩噩地在完成工作，没有想着横向地去拓展自己的个人能力。现在才二十几岁，趁年轻还能学得动，就多学点东西，等以后老了 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/04/09/Vim%E5%AE%89%E8%A3%85Markdown%E9%A2%84%E8%A7%88%E6%8F%92%E4%BB%B6markdown-preview-vim/" title="Vim安装Markdown预览插件markdown-preview.vim">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vim安装Markdown预览插件markdown-preview.vim"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/04/09/Vim%E5%AE%89%E8%A3%85Markdown%E9%A2%84%E8%A7%88%E6%8F%92%E4%BB%B6markdown-preview-vim/" title="Vim安装Markdown预览插件markdown-preview.vim">Vim安装Markdown预览插件markdown-preview.vim</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-04-09T08:32:39.000Z" title="发表于 2019-04-09 16:32:39">2019-04-09</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Vim/">Vim</a></span></div><div class="content"> https://github.com/iamcco/markdown-preview.vim
+步骤1：git clone https://github.com/iamcco/markdown-preview.vim.git 到.vim/bundle里面
+步骤2：在.vimrc文件中添加Plugin &#39;iamcco/markdown-preview.vim&#39;
+步骤3：打开Vim ,输入:PluginInstall,即可加载插件
+步骤4：随便找一个md文档，在Vim输入:Markdown Preview
+
+
+发现更多更好玩的，欢迎关注我的微信公众号:
+
+
+
+
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/04/09/%E8%AE%B0%E4%B8%80%E6%AC%A1Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%8E%AB%E5%90%8D%E5%85%B6%E5%A6%99%E9%94%99%E8%AF%AF/" title="记一次Hexo博客的莫名其妙错误">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="记一次Hexo博客的莫名其妙错误"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/04/09/%E8%AE%B0%E4%B8%80%E6%AC%A1Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%8E%AB%E5%90%8D%E5%85%B6%E5%A6%99%E9%94%99%E8%AF%AF/" title="记一次Hexo博客的莫名其妙错误">记一次Hexo博客的莫名其妙错误</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-04-09T08:32:39.000Z" title="发表于 2019-04-09 16:32:39">2019-04-09</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a></span></div><div class="content"> 今天莫名其妙的把Node升级到v10.15.3,之前都版本都是8.几来的，然后碰巧提交了hexo，然后发现CSS样式显示异常，查看网站源码定位是因为找不到相应的CSS文件，然后手动提交了CSS代码，发现效果比之前都好看了一点点，但是整体效果还是很丑。
+后面注意到每次hexo c g d都会出现一句错误Node Sass does not yet support your current environment: OS X 64-bit with Un,然后顺着错误在网上搜了一下，解决方式
+npm install node-sass -D
+然后死活都因为权限问题安装不了，我一直chmod 777了很久，无果。后面想进入管理员模式sudo su之后一直提示密码错误，我用的一直都是这个密码怎么会出现错误呢，然后网上说是因为使用了zsh的原因
+网上的解决方式：https://www.jianshu.com/p/ee9281bf1ace
+1234567891011121314因为最近要使用终端修改文件的权限，需要使用root，但是在输入root密码时候，su: Sorry提示密码输入错误，总归 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/04/03/Git-Commit%E6%8F%92%E4%BB%B6/" title="Git-Commit插件">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Git-Commit插件"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/04/03/Git-Commit%E6%8F%92%E4%BB%B6/" title="Git-Commit插件">Git-Commit插件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-04-03T09:04:32.000Z" title="发表于 2019-04-03 17:04:32">2019-04-03</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">开发工具</a></span></div><div class="content"> 作者：leohxj链接：https://zhuanlan.zhihu.com/p/34223150来源：知乎著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+起因知乎上有个问题: 如何写好 Git commit log? 很有意思, 能看到各种提交风格: 有用 emoji 的, 有用唐诗的, 有用随机生成的. 风格没有对错, 只要能够体现出 commit 所做的修改即可.
+但是最让我印象深刻的是 @李华桥 的答案:
+
+这种东西，当然要借助工具了，才能够写得即规范，又格式化，还能够支持后续分析。目前比较建议的是，使用终端工具 commitizen/cz-cli + commitizen/cz-conventional-changelog + conventional-changelog/standard-version 一步解决提交信息和版本发布。甚至，如果想更狠一点，在持续集成里面加入 marionebl/commitlint 检查 commit 信息是否符合规范，也不是不可以。
+
+本文就顺着这个方向, 给大家介绍下如何保障项目 commit message 的规 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/02/19/Git%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E5%8F%8A%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/" title="Git本地服务器搭建及使用详解">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Git本地服务器搭建及使用详解"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/02/19/Git%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E5%8F%8A%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/" title="Git本地服务器搭建及使用详解">Git本地服务器搭建及使用详解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-02-19T06:09:43.000Z" title="发表于 2019-02-19 14:09:43">2019-02-19</time></span></div><div class="content">  Git&#x672C;&#x5730;&#x670D;&#x52A1;&#x5668;&#x642D;&#x5EFA;&#x53CA;&#x4F7F;&#x7528;Git&#x662F;&#x4E00;&#x6B3E;&#x514D;&#x8D39;&#x3001;&#x5F00;&#x6E90;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;&#x3002;&#x4F17;&#x6240;&#x5468;&#x77E5;&#x7684;Github&#x4FBF;&#x662F;&#x57FA;&#x4E8E;Git&#x7684;&#x5F00;&#x6E90;&#x4EE3;&#x7801;&#x5E93;&#x4EE5;&#x53CA;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;&#xFF0C;&#x7531;&#x4E8E;&#x5176;&#x8FDC;&#x7A0B;&#x6258;&#x7BA1;&#x ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/02/19/Mac%E3%80%81Linux%E3%80%81%E6%A0%91%E8%8E%93%E6%B4%BE_%C2%B7_Sunny-Ngrok%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/" title="Mac、Linux、树莓派 · Sunny-Ngrok说明文档">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Mac、Linux、树莓派 · Sunny-Ngrok说明文档"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/02/19/Mac%E3%80%81Linux%E3%80%81%E6%A0%91%E8%8E%93%E6%B4%BE_%C2%B7_Sunny-Ngrok%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/" title="Mac、Linux、树莓派 · Sunny-Ngrok说明文档">Mac、Linux、树莓派 · Sunny-Ngrok说明文档</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-02-19T00:05:26.000Z" title="发表于 2019-02-19 08:05:26">2019-02-19</time></span></div><div class="content">  Ngrok Mac&#x3001;Linux&#x3001;&#x6811;&#x8393;&#x6D3E;&#x4F7F;&#x7528;&#x6559;&#x7A0B;1&#x3001;&#x4E0B;&#x8F7D;&#x5BA2;&#x6237;&#x7AEF;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x53BB;&#x4E0B;&#x8F7D;&#x5BF9;&#x5E94;&#x7684; &#x5BA2;&#x6237;&#x7AEF; 2&#x3001;&#x542F;&#x52A8;&#x96A7;&#x9053;Mac&#x3001;Linux&#x3001;&#x6811;&#x8393;&#x6D3E;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;Windows&#x624D;&#x4F1A;&#x4E0D;&#x4E00;&#x6837;& ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/02/19/Sunny-Ngrok_http%E5%89%8D%E7%BD%AE%E5%9F%9F%E5%90%8D%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" title="Sunny-Ngrok http前置域名使用方法">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Sunny-Ngrok http前置域名使用方法"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/02/19/Sunny-Ngrok_http%E5%89%8D%E7%BD%AE%E5%9F%9F%E5%90%8D%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" title="Sunny-Ngrok http前置域名使用方法">Sunny-Ngrok http前置域名使用方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-02-18T23:53:42.000Z" title="发表于 2019-02-19 07:53:42">2019-02-19</time></span></div><div class="content">  Sunny-Ngrok http&#x524D;&#x7F6E;&#x57DF;&#x540D;&#x4F7F;&#x7528;&#x65B9;&#x6CD5; &#x65F6;&#x95F4;:2017-02-22 01:33&#x680F;&#x76EE;:Sunny-Ngrok&#x6D4F;&#x89C8;:200028&#x8D5E;:325&#x8E29;:115&#x5B57;&#x4F53;:&#x5927;&#x4E2D;&#x5C0F;. &#x4EE5;&#x4E0B;&#x4E3A;&#x672C;&#x7BC7;&#x6587;&#x7AE0;&#x5168;&#x90E8;&#x5185;&#x5BB9;&#xFF1A;&#x4F7F;&#x7528;Sunny-Ngrok&#x8D60;&#x9001;&#x7684;&#x514D;&#x8D39;&#x57DF;&#x540D;&#x8FDB;&#x884C;http&#x670D;&#x52A1;&#x6620;&#x5C04;1&#x3001;&#x9996;&#x5148;&#x5728;&# ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/02/18/%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E7%9A%842018%E6%80%BB%E7%BB%93%EF%BC%8C2019%E5%B1%95%E6%9C%9B/" title="一个前端的2018总结，2019展望">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一个前端的2018总结，2019展望"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/02/18/%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E7%9A%842018%E6%80%BB%E7%BB%93%EF%BC%8C2019%E5%B1%95%E6%9C%9B/" title="一个前端的2018总结，2019展望">一个前端的2018总结，2019展望</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-02-18T07:06:51.000Z" title="发表于 2019-02-18 15:06:51">2019-02-18</time></span></div><div class="content">  &#x6280;&#x672F;&#x80D6;2019&#x5E74;01&#x6708;14&#x65E5;&#x9605;&#x8BFB; 17127&#x4E00;&#x4E2A;&#x524D;&#x7AEF;&#x7684;2018&#x603B;&#x7ED3;&#xFF0C;2019&#x5C55;&#x671B; | &#x6398;&#x91D1;&#x5E74;&#x5EA6;&#x5F81;&#x6587;2018&#x5E74;&#x603B;&#x7ED3;&#xFF1A;&#x6211;&#x662F;&#x6280;&#x672F;&#x80D6;&#xFF0C;&#x6211;&#x6765;&#x53C2;&#x52A0;&#x5F81;&#x6587;&#x4E86;&#xFF0C;&#x5176;&#x5B9E;&#x6211;&#x5728;2018&#x5E74;&#x5E74;&#x5E95;&#x65F6;&#xFF0C;&#x5199;&#x8FC7;&#x4E00;&#x7BC7;&#x603B;&#x7ED3;&#x6587;& ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/02/15/%E6%88%90%E4%B8%BA%E4%B8%80%E4%B8%AA%E6%9C%89%E7%9B%AE%E6%A0%87%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%80%85/" title="成为一个有目标的学习者">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="成为一个有目标的学习者"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/02/15/%E6%88%90%E4%B8%BA%E4%B8%80%E4%B8%AA%E6%9C%89%E7%9B%AE%E6%A0%87%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%80%85/" title="成为一个有目标的学习者">成为一个有目标的学习者</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-02-15T01:28:47.000Z" title="发表于 2019-02-15 09:28:47">2019-02-15</time></span></div><div class="content"> &#x6210;&#x4E3A;&#x4E00;&#x4E2A;&#x6709;&#x76EE;&#x6807;&#x7684;&#x5B66;&#x4E60;&#x8005;2017&#x5E74;2&#x6708;25&#x65E5; by daimajia&#xB7;21&#x6761;&#x8BC4;&#x8BBA;&#x6211;&#x4E00;&#x4E2A;&#x597D;&#x670B;&#x53CB;&#xFF0C;&#x4ED6;&#x5728;&#x4E00;&#x5BB6;&#x56FD;&#x5185;&#x8F83;&#x5927;&#x501F;&#x8D37;&#x5E73;&#x53F0;&#x505A;&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x5E08;&#xFF0C;&#x6BCF;&#x5929;&#x4E94;&#x70B9;&#x8D77;&#x5E8A;&#xFF0C;&#x65E9;&#x65E9;&#x7684;&#x5230;&#x516C;&#x53F8;&#xFF0C;&#x5F00;&#x59CB; ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#content-inner">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/#content-inner">8</a><a class="extend next" rel="next" href="/page/5/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.imgur.com/DnNifwH.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">itgoyo</div><div class="author-info__description">出生不及赵甲第，努力应过陈浮生</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">78</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div><a class="button--animated" id="card-info-btn" href="https://github.com/itgoyo"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/itgoyo" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://www.instagram.com/itgoyo1991" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a><a class="social-icon" href="mailto:itgoyo@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://twitter.com/itgoyo" target="_blank" title=""><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.zhihu.com/people/mkosto" target="_blank" title=""><i class="fab fa-zhihu"></i></a><a class="social-icon" href="https://www.youtube.com/channel/UCpCzS_uKS1zzOAUjuuBNXDQ" target="_blank" title=""><i class="fab fa-youtube"></i></a><a class="social-icon" href="https://space.bilibili.com/12767066" target="_blank" title=""><i class="fas fa-film"></i></a><a class="social-icon" href="https://steamcommunity.com/id/itgoyo/" target="_blank" title=""><i class="fab fa-steam"></i></a><a class="social-icon" href="https://weibo.com/5459991185/profile" target="_blank" title=""><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://itgoyo.github.io/atom.xml" target="_blank" title=""><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎关注本人公众号：fullstacker <img class=" lazyloaded" data-src="/img/fullstacker.jpg" onerror="onerror=null,src=&quot;/img/friend_404.gif&quot;" width="180px" style="display:block;margin:0 auto" src="/img/fullstacker.jpg"></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/11/05/%E5%A6%82%E4%BD%95%E8%AE%A9%E5%88%AB%E4%BA%BA%E5%AF%B9%E4%BA%A4%E4%BB%A3%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%8B%E6%83%85%E5%81%9A%E5%88%B0%E6%94%BE%E5%BF%83%EF%BC%9F/" title="如何让别人对交代给自己的事情做到放心？"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210724205710.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何让别人对交代给自己的事情做到放心？"/></a><div class="content"><a class="title" href="/2020/11/05/%E5%A6%82%E4%BD%95%E8%AE%A9%E5%88%AB%E4%BA%BA%E5%AF%B9%E4%BA%A4%E4%BB%A3%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%8B%E6%83%85%E5%81%9A%E5%88%B0%E6%94%BE%E5%BF%83%EF%BC%9F/" title="如何让别人对交代给自己的事情做到放心？">如何让别人对交代给自己的事情做到放心？</a><time datetime="2020-11-05T15:00:08.000Z" title="发表于 2020-11-05 23:00:08">2020-11-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/04/RSS%E6%89%93%E5%BC%80%E6%96%B0%E4%B8%96%E7%95%8C%E7%9A%84%E5%A4%A7%E9%97%A8/" title="RSS打开新世界的大门"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210724210420.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RSS打开新世界的大门"/></a><div class="content"><a class="title" href="/2020/11/04/RSS%E6%89%93%E5%BC%80%E6%96%B0%E4%B8%96%E7%95%8C%E7%9A%84%E5%A4%A7%E9%97%A8/" title="RSS打开新世界的大门">RSS打开新世界的大门</a><time datetime="2020-11-04T14:21:03.000Z" title="发表于 2020-11-04 22:21:03">2020-11-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/03/05/%E6%9C%89%E5%93%AA%E4%BA%9B%E5%86%B7%E9%97%A8%E4%BD%86%E6%98%AF%E9%9D%9E%E5%B8%B8%E5%80%BC%E5%BE%97%E6%8E%A8%E8%8D%90%E7%9A%84%E8%BD%AF%E4%BB%B6%EF%BC%9F/" title="有哪些冷门但是非常值得推荐的软件？"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210724211407.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="有哪些冷门但是非常值得推荐的软件？"/></a><div class="content"><a class="title" href="/2020/03/05/%E6%9C%89%E5%93%AA%E4%BA%9B%E5%86%B7%E9%97%A8%E4%BD%86%E6%98%AF%E9%9D%9E%E5%B8%B8%E5%80%BC%E5%BE%97%E6%8E%A8%E8%8D%90%E7%9A%84%E8%BD%AF%E4%BB%B6%EF%BC%9F/" title="有哪些冷门但是非常值得推荐的软件？">有哪些冷门但是非常值得推荐的软件？</a><time datetime="2020-03-05T04:28:03.000Z" title="发表于 2020-03-05 12:28:03">2020-03-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/01/19/Docker%E5%AE%B9%E5%99%A8%E9%80%A0%E5%8C%96%E9%92%9F%E7%A5%9E%E7%A7%80/" title="Docker容器造化钟神秀"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210725171907.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker容器造化钟神秀"/></a><div class="content"><a class="title" href="/2020/01/19/Docker%E5%AE%B9%E5%99%A8%E9%80%A0%E5%8C%96%E9%92%9F%E7%A5%9E%E7%A7%80/" title="Docker容器造化钟神秀">Docker容器造化钟神秀</a><time datetime="2020-01-19T03:48:50.000Z" title="发表于 2020-01-19 11:48:50">2020-01-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/01/17/Tmux%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="Tmux的使用教程"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210724211941.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Tmux的使用教程"/></a><div class="content"><a class="title" href="/2020/01/17/Tmux%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="Tmux的使用教程">Tmux的使用教程</a><time datetime="2020-01-17T07:34:00.000Z" title="发表于 2020-01-17 15:34:00">2020-01-17</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Android/"><span class="card-category-list-name">Android</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Go/"><span class="card-category-list-name">Go</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Linux/"><span class="card-category-list-name">Linux</span><span class="card-category-list-count">7</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Mac/"><span class="card-category-list-name">Mac</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Python/"><span class="card-category-list-name">Python</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Vim/"><span class="card-category-list-name">Vim</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"><span class="card-category-list-name">开发工具</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"><span class="card-category-list-name">开源项目</span><span class="card-category-list-count">3</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/" style="font-size: 1.39em; color: rgb(11, 90, 167)">生活随笔</a><a href="/tags/Program/" style="font-size: 1.45em; color: rgb(36, 91, 72)">Program</a><a href="/tags/Github/" style="font-size: 1.21em; color: rgb(179, 27, 32)">Github</a><a href="/tags/Go/" style="font-size: 1.21em; color: rgb(64, 49, 108)">Go</a><a href="/tags/Linux/" style="font-size: 1.33em; color: rgb(162, 3, 70)">Linux</a><a href="/tags/Mac/" style="font-size: 1.21em; color: rgb(11, 12, 1)">Mac</a><a href="/tags/Android/" style="font-size: 1.27em; color: rgb(63, 29, 29)">Android</a><a href="/tags/Python/" style="font-size: 1.21em; color: rgb(199, 119, 8)">Python</a><a href="/tags/Vim/" style="font-size: 1.27em; color: rgb(3, 125, 13)">Vim</a><a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 1.15em; color: rgb(125, 12, 47)">插件</a><a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" style="font-size: 1.15em; color: rgb(96, 67, 154)">读书笔记</a><a href="/tags/Markdown/" style="font-size: 1.15em; color: rgb(182, 108, 61)">Markdown</a><a href="/tags/python/" style="font-size: 1.15em; color: rgb(93, 5, 146)">python</a><a href="/tags/shell/" style="font-size: 1.15em; color: rgb(75, 185, 86)">shell</a><a href="/tags/Hexo/" style="font-size: 1.15em; color: rgb(5, 105, 72)">Hexo</a><a href="/tags/%E8%AE%B0%E5%BF%86%E5%8A%9B/" style="font-size: 1.15em; color: rgb(9, 33, 4)">记忆力</a><a href="/tags/Shadowsocks/" style="font-size: 1.15em; color: rgb(79, 50, 104)">Shadowsocks</a><a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" style="font-size: 1.15em; color: rgb(174, 150, 119)">科学上网</a><a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 1.15em; color: rgb(34, 135, 103)">读书</a><a href="/tags/i3/" style="font-size: 1.21em; color: rgb(198, 69, 94)">i3</a><a href="/tags/Rofi/" style="font-size: 1.15em; color: rgb(86, 18, 147)">Rofi</a><a href="/tags/ncmpcpp/" style="font-size: 1.15em; color: rgb(87, 60, 156)">ncmpcpp</a><a href="/tags/Music/" style="font-size: 1.15em; color: rgb(99, 92, 88)">Music</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/03/"><span class="card-archive-list-date">三月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/01/"><span class="card-archive-list-date">一月 2020</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/12/"><span class="card-archive-list-date">十二月 2019</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/11/"><span class="card-archive-list-date">十一月 2019</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/10/"><span class="card-archive-list-date">十月 2019</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/09/"><span class="card-archive-list-date">九月 2019</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/08/"><span class="card-archive-list-date">八月 2019</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">78</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-07-25T10:06:40.589Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210205144322.png')"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2021 By itgoyo</div><div class="framework-info"><span>框架 </span><a href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        var from = '出自 ' + data.from
+        var sub = "".length == 0 ? new Array() : "".split(',')
+        var both = sub.unshift(data.hitokoto, from)
+        var typed = new Typed('#subtitle', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('subtitle').innerHTML = data.hitokoto
+      }
+    })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

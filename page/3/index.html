@@ -1,0 +1,257 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>一个二货程序员的日常编码 - Talk is cheap,Show me the girl.</title><meta name="author" content="itgoyo"><meta name="copyright" content="itgoyo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="出生不及赵甲第，努力应过陈浮生">
+<meta property="og:type" content="website">
+<meta property="og:title" content="一个二货程序员的日常编码">
+<meta property="og:url" content="https://itgoyo.github.io/page/3/index.html">
+<meta property="og:site_name" content="一个二货程序员的日常编码">
+<meta property="og:description" content="出生不及赵甲第，努力应过陈浮生">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.imgur.com/DnNifwH.png">
+<meta property="article:author" content="itgoyo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.imgur.com/DnNifwH.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://itgoyo.github.io/page/3/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '一个二货程序员的日常编码',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-07-25 18:06:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.imgur.com/DnNifwH.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">78</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-user-secret"></i><span> Resume</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fas fa-folder-open"></i><span> 图库</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movies</span></a></div><div class="menus_item"><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> Books</span></a></div><div class="menus_item"><a class="site-page" href="/games/"><i class="fa-fw fab fa-steam"></i><span> Games</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7210c91c-1c2a-47fb-bb38-07ed640beb36/dcpqkan-4ec95fb5-6ba1-4909-8b8c-15c8ed50b864.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNzIxMGM5MWMtMWMyYS00N2ZiLWJiMzgtMDdlZDY0MGJlYjM2XC9kY3Bxa2FuLTRlYzk1ZmI1LTZiYTEtNDkwOS04YjhjLTE1YzhlZDUwYjg2NC5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.mJ8MJ79S5Dem9_s-ACvoiYRLf2ZTDG1PZBe1aj-8GGE')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">一个二货程序员的日常编码</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-user-secret"></i><span> Resume</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fas fa-folder-open"></i><span> 图库</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movies</span></a></div><div class="menus_item"><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> Books</span></a></div><div class="menus_item"><a class="site-page" href="/games/"><i class="fa-fw fab fa-steam"></i><span> Games</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">一个二货程序员的日常编码</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/itgoyo" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://www.instagram.com/itgoyo1991" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a><a class="social-icon" href="mailto:itgoyo@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://twitter.com/itgoyo" target="_blank" title=""><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.zhihu.com/people/mkosto" target="_blank" title=""><i class="fab fa-zhihu"></i></a><a class="social-icon" href="https://www.youtube.com/channel/UCpCzS_uKS1zzOAUjuuBNXDQ" target="_blank" title=""><i class="fab fa-youtube"></i></a><a class="social-icon" href="https://space.bilibili.com/12767066" target="_blank" title=""><i class="fas fa-film"></i></a><a class="social-icon" href="https://steamcommunity.com/id/itgoyo/" target="_blank" title=""><i class="fab fa-steam"></i></a><a class="social-icon" href="https://weibo.com/5459991185/profile" target="_blank" title=""><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://itgoyo.github.io/atom.xml" target="_blank" title=""><i class="fas fa-rss"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/09/02/html%E8%BD%ACpng%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" title="html转png遇到的问题">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="html转png遇到的问题"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/09/02/html%E8%BD%ACpng%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" title="html转png遇到的问题">html转png遇到的问题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-09-02T03:13:34.000Z" title="发表于 2019-09-02 11:13:34">2019-09-02</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E7%A8%8B%E7%9B%B8%E5%85%B3/">编程相关</a></span></div><div class="content"> &nbsp;&nbsp;今天想分享一篇文章到朋友圈，发现使用印象笔记分享的效果不是很好，需要进入群组，然后有的朋友可能是没有印象笔记的账号的，所以使用印象笔记分享具有很大胆局限性。然后就是用 YuWriter 弄好 md 文档然后导出 图片，然后发现导出图片只能发现导出当前页的一张图片，并且不是长图，文章内容显示不全，所以就导出 html，然后在线转成 png。&nbsp;&nbsp;然后 google 了一下发现一个网站 https://pdfcrowd.com/#convert_by_upload ，导出是正常的，但是图片里面有很多水印显示很难看，所以就放弃了这个网站，于是就想到了之前的一个网站 https://convertio.co ，里面确实也有 html 转 png 的，但是我尝试了一下，发现转 png 之后，里面的内容是乱码的，然后本地发现本地打开 html 是正常的，但是放到 apache 服务器里就显示乱码，即便是使用 vscode 修改了 html 的文本编码也是没有解决问题，然后手动在 html head 加上&lt;head&gt;&lt;meta chars ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/08/28/%E8%AE%B0%E4%B9%B0%E4%B8%80%E4%B8%AA4K%E6%98%BE%E7%A4%BA%E5%99%A8%E7%9A%84%E8%BF%87%E7%A8%8B/" title="记买一个4K显示器的过程">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="记买一个4K显示器的过程"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/08/28/%E8%AE%B0%E4%B9%B0%E4%B8%80%E4%B8%AA4K%E6%98%BE%E7%A4%BA%E5%99%A8%E7%9A%84%E8%BF%87%E7%A8%8B/" title="记买一个4K显示器的过程">记买一个4K显示器的过程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-08-28T01:25:09.000Z" title="发表于 2019-08-28 09:25:09">2019-08-28</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a></span></div><div class="content"> &nbsp;&nbsp;由于最近在 B 站直播的次数有点多，还有就是平时录制的视频也有点人看了，所以想多做点视频发布到 B 站上面，但是自己看了以前的视频，发现视频确实画面确实粗糙，不仅仅是视频不清晰的原因，更主要的是我眼睛看着黑苹果的2k 屏幕看久了眼睛莫名的难受，毕竟苹果的渲染方式和 Windows 的不太一样，所以觉得上4K 是一件最近要完成的事情，然后可以把我2k 的显示器给我搞设计的弟弟用。&nbsp;&nbsp;于是乎赶上了 jd 的活动，一款 LG 的4K ips 屏幕仅售1799，评价上万了，大概看了一下评价，感觉还行于是就下单了，显示器第二天就到了，开机一开，显示器底座确实辣鸡的一，是我用过那么多显示器最辣鸡的一个了，满满的塑料感，感觉会被压塌一样。底座嘛，无所谓，我可以换一个挂壁，确实也用了一个挂壁的支架，但是先后发货可能是出厂地方不同吧，没有同时到货。于是搭建好显示器，开机搞了很久才能点亮，好像要设置输出，不然屏幕接收不到信号。然后在 Windows 环境下使用鲁大师屏幕检测，没有坏点，但是右下角有黑色的泛光，看起来难受得很，于是决定退货。
+
+
+&nbsp;&n ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/07/15/%E5%85%B3%E4%BA%8E%E8%87%AA%E5%AD%A6%E7%BC%96%E7%A8%8B%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BD%93%E4%BC%9A/" title="关于自学编程的一些体会">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于自学编程的一些体会"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/07/15/%E5%85%B3%E4%BA%8E%E8%87%AA%E5%AD%A6%E7%BC%96%E7%A8%8B%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BD%93%E4%BC%9A/" title="关于自学编程的一些体会">关于自学编程的一些体会</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-07-15T03:45:55.000Z" title="发表于 2019-07-15 11:45:55">2019-07-15</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E7%A8%8B%E7%9B%B8%E5%85%B3/">编程相关</a></span></div><div class="content"> 先说说我是如何自学编程的吧，一般我学习一门新语言都时候是不看书的，首先书上的东西太多太杂了，完全分不清什么是重点什么是工作需要的什么是没必要学习的。所以我一直以来的自学编程都是从看视频开始的，但是看视频学习有一个缺点就是容易犯困，这个需要你有强硬的自制力了。我经常是站起来看视频经常困得人快倒下的时候给吓醒的，因为看视频我是加速看的，一直听感觉有些无聊，特别容易犯困，如果哪天你失眠了，你可以搞一个开发视频过来看看，有助于睡眠哟。
+如果自己找不到你想要学习的视频，那就花钱买无论是 TB 还是闲鱼经常有这种贩卖资源的，价格便宜也就几块钱，几块钱你买不了吃亏你买不了上当。所以这些钱你是很有必要花的，不要觉得不值得只买了一个链接，你要知道你自己的时间也是有价值的，你现在是花钱去买时间，用省下来的时间去创造更多的价值，时间很宝贵。
+建议弄一个学习小组，有共同点兴趣爱好，一起学习进步，你们时不时可以一起讨论问题，甚至可以协同合作尝试开发一个小项目。自己在自学的道路上是很孤独的，所以你很有必要有一个伴，不管是男伴还是女伴都不重要，以为到时候你重点都不是在伴上，而是撸码上的快感。严格要求自己，要培养一 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/07/15/%E5%85%BB%E6%88%90%E5%AD%A6%E4%B9%A0%E5%81%9A%E7%AC%94%E8%AE%B0%E7%9A%84%E4%B9%A0%E6%83%AF/" title="养成学习做笔记的习惯">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="养成学习做笔记的习惯"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/07/15/%E5%85%BB%E6%88%90%E5%AD%A6%E4%B9%A0%E5%81%9A%E7%AC%94%E8%AE%B0%E7%9A%84%E4%B9%A0%E6%83%AF/" title="养成学习做笔记的习惯">养成学习做笔记的习惯</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-07-15T02:45:34.000Z" title="发表于 2019-07-15 10:45:34">2019-07-15</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E7%A8%8B%E7%9B%B8%E5%85%B3/">编程相关</a></span></div><div class="content"> 学了那么多编程语言，但是感觉每次只要隔了一段时间没用过之后就基本忘了差不多了，每次网上搜索教程也都是菜鸟教程上面的东西。今天学习 nodejs的时候发现里面的源码居然有BYVoid这个关键字，怎么说也是我仰慕的一个人，或许菜鸟教程上面的代码都是书上面的代码，可能还是站长自己弄的没有组织。想想反正每次都要在菜鸟教程上面看教程为什么不直接在学习菜鸟教程的时候，同样吧上面的内容给同步到自己的个人博客上面去呢，这样子下次找资料或者重新学习的时候可能还可以回忆一些，所以只要把菜鸟上面的内容用目录的形式同步过来其实也就和本地服务器查看差不多了，或许还可能给自己的网站带来流量也说不定呢，哈哈哈~~~
+
+
+发现更多更好玩的，欢迎关注我的微信公众号:
+
+
+
+
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/07/15/%E8%AE%B0hexo%E6%A0%B7%E5%BC%8F%E5%8F%98%E5%8C%96%E7%9A%84%E5%A5%87%E6%80%AA%E9%94%99%E8%AF%AF/" title="记hexo样式变化的奇怪错误">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="记hexo样式变化的奇怪错误"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/07/15/%E8%AE%B0hexo%E6%A0%B7%E5%BC%8F%E5%8F%98%E5%8C%96%E7%9A%84%E5%A5%87%E6%80%AA%E9%94%99%E8%AF%AF/" title="记hexo样式变化的奇怪错误">记hexo样式变化的奇怪错误</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-07-15T00:41:13.000Z" title="发表于 2019-07-15 08:41:13">2019-07-15</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E7%A8%8B%E7%9B%B8%E5%85%B3/">编程相关</a></span></div><div class="content"> 最近每次更新 hexo 内容之后，每次提交到 Github 之后的展示效果和在本地的展示效果有些差异，然后想到问题的可能性就是少提交了某些东西。然后看到每次hexo d的时候都有需要权限的错误，估计和之前遇到的错误类似，就是我现在的这个用户没有hexo的绝对权限，所以修改hexo目录的权限即可，最简单的方式莫过于sudo chown -R itgoyo /Users/itgoyo/Documents/hexo/。所以为了保证日后每次提交都正常，每次执行 hexo 命令之前都要先输入上面那句修改目录权限的代码，希望对你们同样也有帮助。
+
+
+发现更多更好玩的，欢迎关注我的微信公众号:
+
+
+
+
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/07/12/Hexo%E4%BD%BF%E7%94%A8Valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E5%B9%B6%E4%B8%94%E4%BD%BF%E7%94%A8%E9%82%AE%E4%BB%B6%E9%80%9A%E7%9F%A5%E6%9C%89%E6%96%B0%E8%AF%84%E8%AE%BA/" title="Hexo使用Valine评论系统并且使用邮件通知有新评论">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo使用Valine评论系统并且使用邮件通知有新评论"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/07/12/Hexo%E4%BD%BF%E7%94%A8Valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E5%B9%B6%E4%B8%94%E4%BD%BF%E7%94%A8%E9%82%AE%E4%BB%B6%E9%80%9A%E7%9F%A5%E6%9C%89%E6%96%B0%E8%AF%84%E8%AE%BA/" title="Hexo使用Valine评论系统并且使用邮件通知有新评论">Hexo使用Valine评论系统并且使用邮件通知有新评论</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-07-12T10:52:53.000Z" title="发表于 2019-07-12 18:52:53">2019-07-12</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E7%A8%8B%E7%9B%B8%E5%85%B3/">编程相关</a></span></div><div class="content"> 今天在用 hexo 的时候发现个别文章有别人使用Valine的评论，但是当我发现的时候时间已经过去了几个月了，根本就不知道有消息提醒这回事，首先Value 没看到有一个管理员系统，所以没法查看总的未提醒数。后面在 Value 原作者 Github 上面发现了他有通过leancloud然后使用邮件来提醒，通过一个下午的实验终于成功了，我把捣弄过程中我遇到的坑给大家说一下。
+坑一代码仓库地址是填写https://github.com/DesertsP/Valine-Admin.git不是填写你自己 Github 上面的仓库，统一都是使用这个地址，之前我不知道导致填写定时任务的时候一直出错。
+坑二在填写接收邮箱密码的时候写的不是你的邮箱密码，而是在邮箱设置里面的POP3/IMAP生成的授权码，这个是随机生成的。之前一直调不通就是因为这个原因。
+
+以下是原作者的教程打开可以参考一下
+aline Admin 是 Valine 评论系统的扩展和增强，主要实现评论邮件通知、评论管理、垃圾评论过滤等功能。支持完全自定义的邮件通知模板，基于Akismet API实现准确的垃圾评论过滤。近期更改了Git ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/07/12/Vim%E7%BC%96%E8%BE%91%E5%99%A8insert%E5%88%87%E6%8D%A2%E5%9B%9Enormal%E5%BB%B6%E8%BF%9F%E5%8D%A1%E9%A1%BF%E7%9A%84%E9%97%AE%E9%A2%98/" title="Vim编辑器insert切换回normal延迟卡顿的问题">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vim编辑器insert切换回normal延迟卡顿的问题"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/07/12/Vim%E7%BC%96%E8%BE%91%E5%99%A8insert%E5%88%87%E6%8D%A2%E5%9B%9Enormal%E5%BB%B6%E8%BF%9F%E5%8D%A1%E9%A1%BF%E7%9A%84%E9%97%AE%E9%A2%98/" title="Vim编辑器insert切换回normal延迟卡顿的问题">Vim编辑器insert切换回normal延迟卡顿的问题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-07-12T05:37:17.000Z" title="发表于 2019-07-12 13:37:17">2019-07-12</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Vim/">Vim</a></span></div><div class="content"> 解决方式：在.vimrc
+加入
+set timeoutlen=1 ttimeoutlen=0
+即可完美解决
+
+
+发现更多更好玩的，欢迎关注我的微信公众号:
+
+
+
+
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/07/12/%E5%AF%B9%E4%B8%8D%E8%B5%B7%EF%BC%8C%E6%88%91%E8%BF%98%E6%98%AF%E6%94%BE%E5%BC%83%E4%BA%86Rails/" title="对不起，我还是放弃了Rails">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="对不起，我还是放弃了Rails"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/07/12/%E5%AF%B9%E4%B8%8D%E8%B5%B7%EF%BC%8C%E6%88%91%E8%BF%98%E6%98%AF%E6%94%BE%E5%BC%83%E4%BA%86Rails/" title="对不起，我还是放弃了Rails">对不起，我还是放弃了Rails</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-07-12T01:08:00.000Z" title="发表于 2019-07-12 09:08:00">2019-07-12</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E7%A8%8B%E7%9B%B8%E5%85%B3/">编程相关</a></span></div><div class="content"> 前两天兴致冲冲地想去学习 Xdite 老师的全栈营，结果花钱到 TB 购买了课程，然后下载了半天的视频，看了一些视频发现 Xdite 使用的是 Rails，然后现在 Rails 相对于两年前或者更早前已经没那么常用了。现在市面上前端框架一大推，框架一套，代码一梭哈就完事了，做出来的效果可能比之前都还要好看也容易入手，这也是现在为什么前端开发遍地开花的原因。诸此种种，所以我还是放弃了不停的去敲 Rails,但是 Xdite 老师教程里面说的编程思想我还是觉得挺好挺受用的，例如刻意练习，元学习,代码敲3遍,复盘等等。关键点一个还有每天都要写ROID,这是每日的复盘:记录客观事件-&gt;情绪-&gt;反思-&gt;下一步，不停的迭代循环，可惜我没有做到。我觉得编程都是大同小异的，只要方法是对的，学习什么语言都受用。我想我平时学习编程的时候都太激进,太傲慢了，总是看很多很多都视频但是都没有好好地去敲代码，只是一味地去填鸭式吸收教程里面的知识点，但是本身并没有去亲自敲代码，没有好好的去练习项目，一个项目如果没有敲过3遍以上，你凭什么说你熟悉这个项目或者说，你已经入门了这种语言。这两年我不断地 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/07/10/Mac%E5%AE%89%E8%A3%85rails/" title="Mac安装rails">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Mac安装rails"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/07/10/Mac%E5%AE%89%E8%A3%85rails/" title="Mac安装rails">Mac安装rails</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-07-10T10:32:26.000Z" title="发表于 2019-07-10 18:32:26">2019-07-10</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E7%A8%8B%E7%9B%B8%E5%85%B3/">编程相关</a></span></div><div class="content"> 安装 Rails在终端中执行以下命令：
+sudo gem install rails
+可能会遇到以下问题：
+ERROR:  Error installing rails:    activesupport requires Ruby version &gt;= 2.2.2.
+使用：
+ruby -v
+查看当前版本
+ruby 2.0.0p648 (2015-12-16 revision 53162) [universal.x86_64-darwin16]
+升级 ruby这一过程请参考：macOS Ruby版本需要升级到2.2.2以上
+升级完成后再执行上面的安装步骤。
+创建 Rails 项目1、查看 Rails 帮助，执行
+rails
+不需要带任何参数，输出的最后会给出创建项目的命令。
+2、创建一个新项目
+rails new ~/Code/Ruby/weblog
+创建项目执行到
+run  bundle install
+时可能会出现提示：
+1The dependency tzinfo-data (&gt;&#x3D; 0) will be unused by any of the platf ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/07/10/%E5%85%A5%E5%AD%A6%E6%89%8B%E5%86%8C%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB/" title="入学手册知识汇总">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="入学手册知识汇总"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/07/10/%E5%85%A5%E5%AD%A6%E6%89%8B%E5%86%8C%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB/" title="入学手册知识汇总">入学手册知识汇总</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-07-10T05:40:53.000Z" title="发表于 2019-07-10 13:40:53">2019-07-10</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E7%A8%8B%E7%9B%B8%E5%85%B3/">编程相关</a></span></div><div class="content"> 课程如何运作大家好，这里是全栈营学习的主课时间表：
+课前作业期（3月8日–4月2日） 我们会在直播室举办课前直播（回放的视频第二天会发布在”往期直播”里） 时间：3月22日晚八点
+首先要完成: Mac电脑的购置； 科学上网的配置；
+4月3日前需要完成: 第一课：环境建制 第二课：初级练习 第三课：rails101（三遍） 建议每周留出20小时用在全栈营的学习上。
+学习资源： 请尽快熟悉和使用以下资源
+　 学习中心：进入课程学习的入口、显示重要的通知
+　 帮助文档：新手入门与知识点解说
+　 交流论坛：线上学习交流园地
+　 Slack：提问助教的好地方（如何提问）
+　 Meetup：同学们定期聚会，共同成长
+　 Logdown：记录成长历程的自留地
+　 VIP微信群：即时和同学交流的平台
+正式开学 主课程(4月–6月）：
+第一阶段： 初级项目实战：4月3日-4月26日； 招聘网站比赛：4月末到5月初；
+第二阶段： 中级项目实战：5月初到6月初； 商店网站比赛：5月末到6月中旬。 求职辅导：6月 注：以上时间表可能会按实际情况进行微调
+每周如何进行
+　 每周一：课程上新，一部分的录像、一部 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#content-inner">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/#content-inner">8</a><a class="extend next" rel="next" href="/page/4/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.imgur.com/DnNifwH.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">itgoyo</div><div class="author-info__description">出生不及赵甲第，努力应过陈浮生</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">78</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div><a class="button--animated" id="card-info-btn" href="https://github.com/itgoyo"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/itgoyo" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://www.instagram.com/itgoyo1991" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a><a class="social-icon" href="mailto:itgoyo@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://twitter.com/itgoyo" target="_blank" title=""><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.zhihu.com/people/mkosto" target="_blank" title=""><i class="fab fa-zhihu"></i></a><a class="social-icon" href="https://www.youtube.com/channel/UCpCzS_uKS1zzOAUjuuBNXDQ" target="_blank" title=""><i class="fab fa-youtube"></i></a><a class="social-icon" href="https://space.bilibili.com/12767066" target="_blank" title=""><i class="fas fa-film"></i></a><a class="social-icon" href="https://steamcommunity.com/id/itgoyo/" target="_blank" title=""><i class="fab fa-steam"></i></a><a class="social-icon" href="https://weibo.com/5459991185/profile" target="_blank" title=""><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://itgoyo.github.io/atom.xml" target="_blank" title=""><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎关注本人公众号：fullstacker <img class=" lazyloaded" data-src="/img/fullstacker.jpg" onerror="onerror=null,src=&quot;/img/friend_404.gif&quot;" width="180px" style="display:block;margin:0 auto" src="/img/fullstacker.jpg"></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/11/05/%E5%A6%82%E4%BD%95%E8%AE%A9%E5%88%AB%E4%BA%BA%E5%AF%B9%E4%BA%A4%E4%BB%A3%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%8B%E6%83%85%E5%81%9A%E5%88%B0%E6%94%BE%E5%BF%83%EF%BC%9F/" title="如何让别人对交代给自己的事情做到放心？"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210724205710.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何让别人对交代给自己的事情做到放心？"/></a><div class="content"><a class="title" href="/2020/11/05/%E5%A6%82%E4%BD%95%E8%AE%A9%E5%88%AB%E4%BA%BA%E5%AF%B9%E4%BA%A4%E4%BB%A3%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%8B%E6%83%85%E5%81%9A%E5%88%B0%E6%94%BE%E5%BF%83%EF%BC%9F/" title="如何让别人对交代给自己的事情做到放心？">如何让别人对交代给自己的事情做到放心？</a><time datetime="2020-11-05T15:00:08.000Z" title="发表于 2020-11-05 23:00:08">2020-11-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/04/RSS%E6%89%93%E5%BC%80%E6%96%B0%E4%B8%96%E7%95%8C%E7%9A%84%E5%A4%A7%E9%97%A8/" title="RSS打开新世界的大门"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210724210420.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RSS打开新世界的大门"/></a><div class="content"><a class="title" href="/2020/11/04/RSS%E6%89%93%E5%BC%80%E6%96%B0%E4%B8%96%E7%95%8C%E7%9A%84%E5%A4%A7%E9%97%A8/" title="RSS打开新世界的大门">RSS打开新世界的大门</a><time datetime="2020-11-04T14:21:03.000Z" title="发表于 2020-11-04 22:21:03">2020-11-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/03/05/%E6%9C%89%E5%93%AA%E4%BA%9B%E5%86%B7%E9%97%A8%E4%BD%86%E6%98%AF%E9%9D%9E%E5%B8%B8%E5%80%BC%E5%BE%97%E6%8E%A8%E8%8D%90%E7%9A%84%E8%BD%AF%E4%BB%B6%EF%BC%9F/" title="有哪些冷门但是非常值得推荐的软件？"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210724211407.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="有哪些冷门但是非常值得推荐的软件？"/></a><div class="content"><a class="title" href="/2020/03/05/%E6%9C%89%E5%93%AA%E4%BA%9B%E5%86%B7%E9%97%A8%E4%BD%86%E6%98%AF%E9%9D%9E%E5%B8%B8%E5%80%BC%E5%BE%97%E6%8E%A8%E8%8D%90%E7%9A%84%E8%BD%AF%E4%BB%B6%EF%BC%9F/" title="有哪些冷门但是非常值得推荐的软件？">有哪些冷门但是非常值得推荐的软件？</a><time datetime="2020-03-05T04:28:03.000Z" title="发表于 2020-03-05 12:28:03">2020-03-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/01/19/Docker%E5%AE%B9%E5%99%A8%E9%80%A0%E5%8C%96%E9%92%9F%E7%A5%9E%E7%A7%80/" title="Docker容器造化钟神秀"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210725171907.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker容器造化钟神秀"/></a><div class="content"><a class="title" href="/2020/01/19/Docker%E5%AE%B9%E5%99%A8%E9%80%A0%E5%8C%96%E9%92%9F%E7%A5%9E%E7%A7%80/" title="Docker容器造化钟神秀">Docker容器造化钟神秀</a><time datetime="2020-01-19T03:48:50.000Z" title="发表于 2020-01-19 11:48:50">2020-01-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/01/17/Tmux%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="Tmux的使用教程"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210724211941.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Tmux的使用教程"/></a><div class="content"><a class="title" href="/2020/01/17/Tmux%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="Tmux的使用教程">Tmux的使用教程</a><time datetime="2020-01-17T07:34:00.000Z" title="发表于 2020-01-17 15:34:00">2020-01-17</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Android/"><span class="card-category-list-name">Android</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Go/"><span class="card-category-list-name">Go</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Linux/"><span class="card-category-list-name">Linux</span><span class="card-category-list-count">7</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Mac/"><span class="card-category-list-name">Mac</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Python/"><span class="card-category-list-name">Python</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Vim/"><span class="card-category-list-name">Vim</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"><span class="card-category-list-name">开发工具</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"><span class="card-category-list-name">开源项目</span><span class="card-category-list-count">3</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/" style="font-size: 1.39em; color: rgb(11, 90, 167)">生活随笔</a><a href="/tags/Program/" style="font-size: 1.45em; color: rgb(36, 91, 72)">Program</a><a href="/tags/Github/" style="font-size: 1.21em; color: rgb(179, 27, 32)">Github</a><a href="/tags/Go/" style="font-size: 1.21em; color: rgb(64, 49, 108)">Go</a><a href="/tags/Linux/" style="font-size: 1.33em; color: rgb(162, 3, 70)">Linux</a><a href="/tags/Mac/" style="font-size: 1.21em; color: rgb(11, 12, 1)">Mac</a><a href="/tags/Android/" style="font-size: 1.27em; color: rgb(63, 29, 29)">Android</a><a href="/tags/Python/" style="font-size: 1.21em; color: rgb(199, 119, 8)">Python</a><a href="/tags/Vim/" style="font-size: 1.27em; color: rgb(3, 125, 13)">Vim</a><a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 1.15em; color: rgb(125, 12, 47)">插件</a><a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" style="font-size: 1.15em; color: rgb(96, 67, 154)">读书笔记</a><a href="/tags/Markdown/" style="font-size: 1.15em; color: rgb(182, 108, 61)">Markdown</a><a href="/tags/python/" style="font-size: 1.15em; color: rgb(93, 5, 146)">python</a><a href="/tags/shell/" style="font-size: 1.15em; color: rgb(75, 185, 86)">shell</a><a href="/tags/Hexo/" style="font-size: 1.15em; color: rgb(5, 105, 72)">Hexo</a><a href="/tags/%E8%AE%B0%E5%BF%86%E5%8A%9B/" style="font-size: 1.15em; color: rgb(9, 33, 4)">记忆力</a><a href="/tags/Shadowsocks/" style="font-size: 1.15em; color: rgb(79, 50, 104)">Shadowsocks</a><a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" style="font-size: 1.15em; color: rgb(174, 150, 119)">科学上网</a><a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 1.15em; color: rgb(34, 135, 103)">读书</a><a href="/tags/i3/" style="font-size: 1.21em; color: rgb(198, 69, 94)">i3</a><a href="/tags/Rofi/" style="font-size: 1.15em; color: rgb(86, 18, 147)">Rofi</a><a href="/tags/ncmpcpp/" style="font-size: 1.15em; color: rgb(87, 60, 156)">ncmpcpp</a><a href="/tags/Music/" style="font-size: 1.15em; color: rgb(99, 92, 88)">Music</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/03/"><span class="card-archive-list-date">三月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/01/"><span class="card-archive-list-date">一月 2020</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/12/"><span class="card-archive-list-date">十二月 2019</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/11/"><span class="card-archive-list-date">十一月 2019</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/10/"><span class="card-archive-list-date">十月 2019</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/09/"><span class="card-archive-list-date">九月 2019</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/08/"><span class="card-archive-list-date">八月 2019</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">78</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-07-25T10:06:40.589Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210205144322.png')"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2021 By itgoyo</div><div class="framework-info"><span>框架 </span><a href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        var from = '出自 ' + data.from
+        var sub = "".length == 0 ? new Array() : "".split(',')
+        var both = sub.unshift(data.hitokoto, from)
+        var typed = new Typed('#subtitle', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('subtitle').innerHTML = data.hitokoto
+      }
+    })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

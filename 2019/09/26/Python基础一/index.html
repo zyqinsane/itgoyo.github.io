@@ -1,0 +1,459 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Python基础一 | 一个二货程序员的日常编码</title><meta name="keywords" content="Python"><meta name="author" content="itgoyo"><meta name="copyright" content="itgoyo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="一，Python 介绍1. python 的出生与应用　　python 的创始人为吉多・范罗苏姆（Guido van Rossum）。1989 年的圣诞节期间，吉多・范罗苏姆（中文名字：龟叔）为了在阿姆斯特丹打发时间，决心开发一个新的脚本解释程序，作为 ABC 语言的一种继承。   （龟叔：2005 年加入谷歌至 2012 年，2013 年加入 Dropbox 直到现在，依然掌握着 Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python基础一">
+<meta property="og:url" content="https://itgoyo.github.io/2019/09/26/Python%E5%9F%BA%E7%A1%80%E4%B8%80/index.html">
+<meta property="og:site_name" content="一个二货程序员的日常编码">
+<meta property="og:description" content="一，Python 介绍1. python 的出生与应用　　python 的创始人为吉多・范罗苏姆（Guido van Rossum）。1989 年的圣诞节期间，吉多・范罗苏姆（中文名字：龟叔）为了在阿姆斯特丹打发时间，决心开发一个新的脚本解释程序，作为 ABC 语言的一种继承。   （龟叔：2005 年加入谷歌至 2012 年，2013 年加入 Dropbox 直到现在，依然掌握着 Python">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png">
+<meta property="article:published_time" content="2019-09-26T11:26:16.000Z">
+<meta property="article:modified_time" content="2019-09-27T01:08:05.667Z">
+<meta property="article:author" content="itgoyo">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://itgoyo.github.io/2019/09/26/Python%E5%9F%BA%E7%A1%80%E4%B8%80/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Python基础一',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2019-09-27 09:08:05'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.imgur.com/DnNifwH.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">78</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-user-secret"></i><span> Resume</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fas fa-folder-open"></i><span> 图库</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movies</span></a></div><div class="menus_item"><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> Books</span></a></div><div class="menus_item"><a class="site-page" href="/games/"><i class="fa-fw fab fa-steam"></i><span> Games</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">一个二货程序员的日常编码</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-user-secret"></i><span> Resume</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fas fa-folder-open"></i><span> 图库</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movies</span></a></div><div class="menus_item"><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> Books</span></a></div><div class="menus_item"><a class="site-page" href="/games/"><i class="fa-fw fab fa-steam"></i><span> Games</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Python基础一</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-09-26T11:26:16.000Z" title="发表于 2019-09-26 19:26:16">2019-09-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2019-09-27T01:08:05.667Z" title="更新于 2019-09-27 09:08:05">2019-09-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Python/">Python</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Python基础一"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><script src="/assets/js/APlayer.min.js"> </script><h1 id="一，Python-介绍"><a href="#一，Python-介绍" class="headerlink" title="一，Python 介绍"></a>一，Python 介绍</h1><h4 id="1-python-的出生与应用"><a href="#1-python-的出生与应用" class="headerlink" title="1. python 的出生与应用"></a><strong>1. python 的出生与应用</strong></h4><p>　　python 的创始人为吉多・范罗苏姆（Guido van Rossum）。1989 年的圣诞节期间，吉多・范罗苏姆（中文名字：龟叔）为了在阿姆斯特丹打发时间，决心开发一个新的脚本解释程序，作为 ABC 语言的一种继承。  </p>
+<p>（龟叔：2005 年加入谷歌至 2012 年，2013 年加入 Dropbox 直到现在，依然掌握着 Python 发展的核心方向，被称为仁慈的独裁者）。</p>
+<p><img src="https://images2017.cnblogs.com/blog/988316/201709/988316-20170911121503547-2124074284.png"></p>
+<p>2017 年 7 月的 TIOBE 排行榜，Python 已经占据第四的位置， Python 崇尚优美、清晰、简单，是一个优秀并广泛使用的语言。</p>
+<p><img src="https://images2017.cnblogs.com/blog/988316/201708/988316-20170831184813937-1153395617.png"></p>
+<p>由上图可见，Python 整体呈上升趋势，反映出 Python 应用越来越广泛并且也逐渐得到业内的认可！！！</p>
+<p>Python 可以应用于众多领域，如：数据分析、组件集成、网络服务、图像处理、数值计算和科学计算等众多领域。目前业内几乎所有大中型互联网企业都在使用 Python，如：Youtube、Dropbox、BT、Quora（中国知乎）、豆瓣、知乎、Google、Yahoo!、Facebook、NASA、百度、腾讯、汽车之家、美团等。</p>
+<p><strong>目前 Python 主要应用领域：</strong></p>
+<ul>
+<li>  <strong>云计算</strong>: 云计算最火的语言， 典型应用 OpenStack</li>
+<li>  <strong>WEB 开发</strong>: 众多优秀的 WEB 框架，众多大型网站均为 Python 开发，Youtube, Dropbox, 豆瓣。。。， 典型 WEB 框架有 Django</li>
+<li>  <strong>科学运算、人工智能</strong>: 典型库 NumPy, SciPy, Matplotlib, Enthought librarys,pandas</li>
+<li>  <strong>系统运维</strong>: 运维人员必备语言</li>
+<li>  <strong>金融</strong>：量化交易，金融分析，在金融工程领域，Python 不但在用，且用的最多，而且重要性逐年提高。原因：作为动态语言的 Python，语言结构清晰简单，库丰富，成熟稳定，科学计算和统计分析都很牛逼，生产效率远远高于 c,c++,java, 尤其擅长策略回测</li>
+<li>  <strong>图形 GUI</strong>: PyQT, WxPython,TkInter</li>
+</ul>
+<p>**Python 在一些公司的应用： **</p>
+<ul>
+<li>  谷歌：Google App Engine 、code.google.com 、Google earth 、谷歌爬虫、Google 广告等项目都在大量使用 Python 开发</li>
+<li>  CIA: 美国中情局网站就是用 Python 开发的</li>
+<li>  NASA: 美国航天局 (NASA) 大量使用 Python 进行数据分析和运算</li>
+<li>  YouTube: 世界上最大的视频网站 YouTube 就是用 Python 开发的</li>
+<li>  Dropbox: 美国最大的在线云存储网站，全部用 Python 实现，每天网站处理 10 亿个文件的上传和下载</li>
+<li>  Instagram: 美国最大的图片分享社交网站，每天超过 3 千万张照片被分享，全部用 python 开发</li>
+<li>  Facebook: 大量的基础库均通过 Python 实现的</li>
+<li>  Redhat: 世界上最流行的 Linux 发行版本中的 yum 包管理工具就是用 python 开发的</li>
+<li>  豆瓣：公司几乎所有的业务均是通过 Python 开发的</li>
+<li>  知乎：国内最大的问答社区，通过 Python 开发 (国外 Quora)</li>
+<li>  春雨医生：国内知名的在线医疗网站是用 Python 开发的</li>
+<li>  除上面之外，还有搜狐、金山、腾讯、盛大、网易、百度、阿里、淘宝 、土豆、新浪、果壳等公司都在使用 Python 完成各种各样的任务。 </li>
+</ul>
+<p><strong>python 发展史</strong></p>
+<ul>
+<li>  1989 年，为了打发圣诞节假期，Guido 开始写 Python 语言的编译器。Python 这个名字，来自 Guido 所挚爱的电视剧 Monty Python’s Flying Circus。他希望这个新的叫做 Python 的语言，能符合他的理想：创造一种 C 和 shell 之间，功能全面，易学易用，可拓展的语言。</li>
+<li>  1991 年，第一个 Python 编译器诞生。它是用 C 语言实现的，并能够调用 C 语言的库文件。从一出生，Python 已经具有了：类，函数，异常处理，包含表和词典在内的核心数据类型，以及模块为基础的拓展系统。</li>
+<li>  Granddaddy of Python web frameworks, Zope 1 was released in 1999</li>
+<li>  Python 1.0 - January 1994 增加了 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Lambda_calculus">lambda</a>, <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Map_%28higher-order_function%29">map</a>, <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Filter_%28higher-order_function%29">filter</a> and <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Fold_%28higher-order_function%29">reduce</a>.</li>
+<li>  Python 2.0 - October 16, 2000，加入了内存回收机制，构成了现在 Python 语言框架的基础</li>
+<li>  Python 2.4 - November 30, 2004, 同年目前最流行的 WEB 框架 Django 诞生</li>
+<li>  Python 2.5 - September 19, 2006</li>
+<li>  Python 2.6 - October 1, 2008</li>
+<li>  Python 2.7 - July 3, 2010</li>
+<li>  In November 2014, it was announced that Python 2.7 would be supported until 2020, and reaffirmed that there would be no 2.8 release as users were expected to move to Python 3.4+ as soon as possible</li>
+<li>  Python 3.0 - December 3, 2008</li>
+<li>  Python 3.1 - June 27, 2009</li>
+<li>  Python 3.2 - February 20, 2011</li>
+<li>  Python 3.3 - September 29, 2012</li>
+<li>  Python 3.4 - March 16, 2014</li>
+<li>  Python 3.5 - September 13, 2015</li>
+<li>  Python 3.6 - December 16,2016</li>
+</ul>
+<h4 id="2-python-是什么编程语言。"><a href="#2-python-是什么编程语言。" class="headerlink" title="2. python 是什么编程语言。"></a><strong>2. python 是什么编程语言。</strong></h4><p><em>编程语言主要从以下几个角度为进行分类，编译型和解释型、静态语言和动态语言、强类型定义语言和弱类型定义语言，每个分类代表什么意思呢，我们一起来看一下。</em></p>
+<p><strong>2.1 编译型与解释型。</strong></p>
+<p><strong>编译器</strong>是把源程序的每一条语句都编译成机器语言，并保存成二进制文件，这样运行时计算机可以直接以机器语言来运行此程序，速度很快； </p>
+<p>而<strong>解释器</strong>则是只在执行程序时，才一条一条的解释成机器语言给计算机来执行，所以运行速度是不如编译后的程序运行的快的. </p>
+<p>这是因为计算机不能直接认识并执行我们写的语句，它只能认识机器语言 (是二进制的形式)</p>
+<p><img src="https://images2017.cnblogs.com/blog/988316/201709/988316-20170911120842485-871465200.png"></p>
+<p><img src="https://images2017.cnblogs.com/blog/988316/201709/988316-20170911120939860-618931676.png"></p>
+<p><strong>编译型</strong><br>优点：编译器一般会有预编译的过程对代码进行优化。因为编译只做一次，运行时不需要编译，所以编译型语言的程序执行效率高。可以脱离语言环境独立运行。<br>缺点：编译之后如果需要修改就需要整个模块重新编译。编译的时候根据对应的运行环境生成机器码，不同的操作系统之间移植就会有问题，需要根据运行的操作系统环境编译不同的可执行文件。</p>
+<p><strong>解释型</strong><br>优点：有良好的平台兼容性，在任何环境中都可以运行，前提是安装了解释器（虚拟机）。灵活，修改代码的时候直接修改就可以，可以快速部署，不用停机维护。</p>
+<p>缺点：每次运行的时候都要解释一遍，性能上不如编译型语言。</p>
+<p><strong>2.2 动态语言和静态语言</strong><br>通常我们所说的动态语言、静态语言是指动态类型语言和静态类型语言。</p>
+<p>（1）动态类型语言：动态类型语言是指在运行期间才去做数据类型检查的语言，也就是说，在用动态类型的语言编程时，永远也不用给任何变量指定数据类型，该语言会在你第一次赋值给变量时，在内部将数据类型记录下来。Python 和 Ruby 就是一种典型的动态类型语言，其他的各种脚本语言如 VBScript 也多少属于动态类型语言。</p>
+<p>（2）静态类型语言：静态类型语言与动态类型语言刚好相反，它的数据类型是在编译其间检查的，也就是说在写程序时要声明所有变量的数据类型，C/C++ 是静态类型语言的典型代表，其他的静态类型语言还有 C#、JAVA 等。</p>
+<p><strong>2.3 强类型定义语言和弱类型定义语言</strong></p>
+<p>（1）强类型定义语言：强制数据类型定义的语言。也就是说，一旦一个变量被指定了某个数据类型，如果不经过强制转换，那么它就永远是这个数据类型了。举个例子：如果你定义了一个整型变量 a, 那么程序根本不可能将 a 当作字符串类型处理。强类型定义语言是类型安全的语言。</p>
+<p>（2）弱类型定义语言：数据类型可以被忽略的语言。它与强类型定义语言相反，一个变量可以赋不同数据类型的值。</p>
+<p>强类型定义语言在速度上可能略逊色于弱类型定义语言，但是强类型定义语言带来的严谨性能够有效的避免许多错误。另外，“这门语言是不是动态语言” 与 “这门语言是否类型安全” 之间是完全没有联系的！<br>例如：Python 是动态语言，是强类型定义语言（类型安全的语言）; VBScript 是动态语言，是弱类型定义语言（类型不安全的语言）; JAVA 是静态语言，是强类型定义语言（类型安全的语言）。</p>
+<p>通过上面这些介绍，我们可以得出，<strong>python 是一门动态解释性的强类型定义语言。</strong></p>
+<h4 id="3-python-的优缺点。"><a href="#3-python-的优缺点。" class="headerlink" title="3. python 的优缺点。"></a><strong>3. python 的优缺点。</strong></h4><p>先看优点</p>
+<ol>
+<li> Python 的定位是 “优雅”、“明确”、“简单”，所以 Python 程序看上去总是简单易懂，初学者学 Python，不但入门容易，而且将来深入下去，可以编写那些非常非常复杂的程序。</li>
+<li> 开发效率非常高，Python 有非常强大的第三方库，基本上你想通过计算机实现任何功能，Python 官方库里都有相应的模块进行支持，直接下载调用后，在基础库的基础上再进行开发，大大降低开发周期，避免重复造轮子。</li>
+<li> 高级语言 ———— 当你用 Python 语言编写程序的时候，你无需考虑诸如如何管理你的程序使用的内存一类的底层细节</li>
+<li> 可移植性 ———— 由于它的开源本质，Python 已经被移植在许多平台上（经过改动使它能够工 作在不同平台上）。如果你小心地避免使用依赖于系统的特性，那么你的所有 Python 程序无需修改就几乎可以在市场上所有的系统平台上运行</li>
+<li> 可扩展性 ———— 如果你需要你的一段关键代码运行得更快或者希望某些算法不公开，你可以把你的部分程序用 C 或 C++ 编写，然后在你的 Python 程序中使用它们。</li>
+<li> 可嵌入性 ———— 你可以把 Python 嵌入你的 C/C++ 程序，从而向你的程序用户提供脚本功能。</li>
+</ol>
+<p>再看缺点：</p>
+<ol>
+<li> 速度慢，Python 的运行速度相比 C 语言确实慢很多，跟 JAVA 相比也要慢一些，因此这也是很多所谓的大牛不屑于使用 Python 的主要原因，但其实这里所指的运行速度慢在大多数情况下用户是无法直接感知到的，必须借助测试工具才能体现出来，比如你用 C 运一个程序花了 0.01s, 用 Python 是 0.1s, 这样 C 语言直接比 Python 快了 10 倍，算是非常夸张了，但是你是无法直接通过肉眼感知的，因为一个正常人所能感知的时间最小单位是 0.15-0.4s 左右，哈哈。其实在大多数情况下 Python 已经完全可以满足你对程序速度的要求，除非你要写对速度要求极高的搜索引擎等，这种情况下，当然还是建议你用 C 去实现的。</li>
+<li> 代码不能加密，因为 PYTHON 是解释性语言，它的源码都是以名文形式存放的，不过我不认为这算是一个缺点，如果你的项目要求源代码必须是加密的，那你一开始就不应该用 Python 来去实现。</li>
+<li> 线程不能利用多 CPU 问题，这是 Python 被人诟病最多的一个缺点，GIL 即全局解释器锁（Global Interpreter Lock），是<a target="_blank" rel="noopener" href="http://zh.wikipedia.org/wiki/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80" title="计算机程序设计语言">计算机程序设计语言</a><a target="_blank" rel="noopener" href="http://zh.wikipedia.org/wiki/%E8%A7%A3%E9%87%8A%E5%99%A8" title="解释器">解释器</a>用于<a target="_blank" rel="noopener" href="http://zh.wikipedia.org/wiki/%E5%90%8C%E6%AD%A5" title="同步">同步</a><a target="_blank" rel="noopener" href="http://zh.wikipedia.org/wiki/%E7%BA%BF%E7%A8%8B" title="线程">线程</a>的工具，使得任何时刻仅有一个线程在执行，Python 的线程是操作系统的原生线程。在 Linux 上为 pthread，在 Windows 上为 Win thread，完全由操作系统调度线程的执行。一个 python 解释器进程内有一条主线程，以及多条用户程序的执行线程。即使在多核 CPU 平台上，由于 GIL 的存在，所以禁止多线程的并行执行。关于这个问题的折衷解决方法，我们在以后线程和进程章节里再进行详细探讨。</li>
+</ol>
+<p>当我们编写 Python 代码时，我们得到的是一个包含 Python 代码的以<code>.py</code> 为扩展名的文本文件。要运行代码，就需要 Python 解释器去执行<code>.py</code> 文件。</p>
+<p>由于整个 Python 语言从规范到解释器都是开源的，所以理论上，只要水平够高，任何人都可以编写 Python 解释器来执行 Python 代码（当然难度很大）。事实上，确实存在多种 Python 解释器。</p>
+<h4 id="4-python-的种类。"><a href="#4-python-的种类。" class="headerlink" title="4. python 的种类。"></a>4. python 的种类。</h4><p><strong>CPython</strong></p>
+<p>当我们从 <a target="_blank" rel="noopener" href="https://www.python.org/">Python 官方网站</a>下载并安装好 Python 3.6 后，我们就直接获得了一个官方版本的解释器：CPython。这个解释器是用 C 语言开发的，所以叫 CPython。在命令行下运行 <code>python</code> 就是启动 CPython 解释器。</p>
+<p>CPython 是使用最广的 Python 解释器。教程的所有代码也都在 CPython 下执行。</p>
+<p><strong>IPython</strong></p>
+<p>IPython 是基于 CPython 之上的一个交互式解释器，也就是说，IPython 只是在交互方式上有所增强，但是执行 Python 代码的功能和 CPython 是完全一样的。好比很多国产浏览器虽然外观不同，但内核其实都是调用了 IE。</p>
+<p>CPython 用 <code>&gt;&gt;&gt;</code> 作为提示符，而 IPython 用 <code>In [``序号``]:</code> 作为提示符。</p>
+<p><strong>PyPy</strong></p>
+<p>PyPy 是另一个 Python 解释器，它的目标是执行速度。PyPy 采用 <a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Just-in-time_compilation">JIT 技术</a>，对 Python 代码进行动态编译（注意不是解释），所以可以显著提高 Python 代码的执行速度。</p>
+<p>绝大部分 Python 代码都可以在 PyPy 下运行，但是 PyPy 和 CPython 有一些是不同的，这就导致相同的 Python 代码在两种解释器下执行可能会有不同的结果。如果你的代码要放到 PyPy 下执行，就需要了解 <a target="_blank" rel="noopener" href="http://pypy.readthedocs.org/en/latest/cpython_differences.html">PyPy 和 CPython 的不同点</a>。</p>
+<p><strong>Jython</strong></p>
+<p>Jython 是运行在 Java 平台上的 Python 解释器，可以直接把 Python 代码编译成 Java 字节码执行。</p>
+<p><strong>IronPython</strong></p>
+<p>IronPython 和 Jython 类似，只不过 IronPython 是运行在微软.Net 平台上的 Python 解释器，可以直接把 Python 代码编译成.Net 的字节码。</p>
+<p><strong>小结：</strong></p>
+<p>　　Python 的解释器很多，但使用最广泛的还是 CPython。如果要和 Java 或.Net 平台交互，最好的办法不是用 Jython 或 IronPython，而是通过网络调用来交互，确保各程序之间的独立性。</p>
+<h1 id="二-python-环境"><a href="#二-python-环境" class="headerlink" title="二. python 环境"></a>二. python 环境</h1><p>windows 下安装 Python（手动添加环境变量）以 2.7 版本举例：</p>
+<p><strong>windows：</strong></p>
+<p><code>1``、下载安装包</code></p>
+<p><code>https:``/``/``www.python.org``/``downloads``/</code></p>
+<p><code>2``、安装</code></p>
+<p><code>默认安装路径：C:\python27</code></p>
+<p><code>3``、配置环境变量</code></p>
+<p><code>【右键计算机】``-``-``》【属性】``-``-``》【高级系统设置】``-``-``》【高级】``-``-``》【环境变量】``-``-``》【在第二个内容框中找到 变量名为Path 的一行，双击】 ``-``-``&gt; 【Python安装目录追加到变值值中，用 ； 分割】</code></p>
+<p><code>如：原来的值;C:\python27，切记前面有分号</code></p>
+<p>windows 下安装 Python（自动添加环境变量）以 3,.5 版本的举例：</p>
+<p>1. 官网下载：<a target="_blank" rel="noopener" href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a> </p>
+<p>2. 选择版本。</p>
+<p><img src="https://images2017.cnblogs.com/blog/988316/201709/988316-20170915172514469-312217099.png"></p>
+<p>3. 自动添加环境变量。</p>
+<p><img src="https://images2017.cnblogs.com/blog/988316/201709/988316-20170915172904078-2110770811.png"></p>
+<p>4. 更改完成。</p>
+<p><img src="https://images2017.cnblogs.com/blog/988316/201709/988316-20170915173126860-82071647.png"></p>
+<p>5. 点击安装即可。</p>
+<p><strong>linux：</strong></p>
+<p><code>无需安装，原装Python环境</code></p>
+<p><code>ps：如果自带``2.6``，请更新至``2.7</code></p>
+<h1 id="三-python-基础初识。"><a href="#三-python-基础初识。" class="headerlink" title="三. python 基础初识。"></a>三. python 基础初识。</h1><h4 id="1-运行-python-代码。"><a href="#1-运行-python-代码。" class="headerlink" title="1. 运行 python 代码。"></a>1. 运行 python 代码。</h4><p>在 d 盘下创建一个 t1.py 文件内容是：</p>
+<p>print(‘hello world’)</p>
+<p>打开 windows 命令行输入 cmd，确定后 写入代码 python d:t1.py </p>
+<p><img src="https://images2017.cnblogs.com/blog/988316/201709/988316-20170917111005797-4582581.png"><img src="https://images2017.cnblogs.com/blog/988316/201709/988316-20170917111305953-1783077606.png"></p>
+<p>您已经运行了第一个 python 程序， 即：终端 —-&gt;cmd—–&gt; python  文件路径。 回车搞定～</p>
+<h4 id="2-解释器。"><a href="#2-解释器。" class="headerlink" title="2. 解释器。"></a>2. 解释器。</h4><p>上一步中执行 python d:t1.py 时，明确的指出 t1.py 脚本由 python 解释器来执行。</p>
+<p>如果想要类似于执行 shell 脚本一样执行 python 脚本，例： <code>./t1.py </code>，那么就需要在 hello.py 文件的头部指定解释器，如下：</p>
+<p><code>#!/usr/bin/env python</code></p>
+<p><code>print</code> <code>&quot;hello,world&quot;</code></p>
+<p>如此一来，执行： .<code>/t1.py</code> 即可。</p>
+<p>ps：执行前需给予 t1.py 执行权限，chmod 755 t1.py</p>
+<h4 id="3-注释。"><a href="#3-注释。" class="headerlink" title="3. 注释。"></a>3. 注释。</h4><p>当行注释：# 被注释内容</p>
+<p>多行注释：’’’ 被注释内容 ‘’’，或者 “””被注释内容”””</p>
+<h4 id="4-变量"><a href="#4-变量" class="headerlink" title="4. 变量"></a>4. 变量</h4><p>变量是什么？  变量：把程序运行的中间结果临时的存在内存里，以便后续的代码调用。</p>
+<p>4.1、声明变量</p>
+<p>lux = ‘鲁迅本人’</p>
+<p>上述代码声明了一个变量，变量名为： lux，变量 name 的值为：”鲁迅本人”</p>
+<p>变量的作用：昵称，其代指内存里某个地址中保存的内容</p>
+<p><img src="https://img2018.cnblogs.com/blog/988316/201903/988316-20190320161204923-1333237354.png"></p>
+<p>4.2、变量定义的规则：</p>
+<ul>
+<li>  变量名只能是 字母、数字或下划线的任意组合</li>
+<li>  变量名的第一个字符不能是数字</li>
+<li>以下关键字不能声明为变量名<br>  [‘and’, ‘as’, ‘assert’, ‘break’, ‘class’, ‘continue’, ‘def’, ‘del’, ‘elif’, ‘else’, ‘except’, ‘exec’, ‘finally’, ‘for’, ‘from’, ‘global’, ‘if’, ‘import’, ‘in’, ‘is’, ‘lambda’, ‘not’, ‘or’, ‘pass’, ‘print’, ‘raise’, ‘return’, ‘try’, ‘while’, ‘with’, ‘yield’]</li>
+<li>  变量的定义要具有可描述性。</li>
+</ul>
+<p>4.3、推荐定义方式</p>
+<p>#驼峰体<br> AgeOfOldboy = 56 NumberOfStudents = 80</p>
+<p>#下划线<br> age_of_oldboy = 56 number_of_students = 80</p>
+<blockquote>
+<p>你觉得哪种更清晰，哪种就是官方推荐的，我想你肯定会先第 2 种，第一种 AgeOfOldboy 咋一看以为是 AngelaBaby</p>
+</blockquote>
+<p>4.4、变量的赋值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lux &#x3D; &#39;鲁迅本人&#39;、</span><br><span class="line">name &#x3D; &#39;太白金星&#39;</span><br></pre></td></tr></table></figure>
+<p><img src="https://img2018.cnblogs.com/blog/988316/201903/988316-20190320161740585-1210403150.png"></p>
+<p>name1 = ‘太白金星’ name2 = name1<br>name3 = name2</p>
+<p><img src="https://img2018.cnblogs.com/blog/988316/201903/988316-20190320162125444-1315440542.png"></p>
+<p>4.5、定义变量不好的方式举例</p>
+<ul>
+<li>  变量名为中文、拼音</li>
+<li>  变量名过长</li>
+<li>  变量名词不达意</li>
+</ul>
+<h4 id="5-常量"><a href="#5-常量" class="headerlink" title="5. 常量"></a>5. 常量</h4><p>常量即指不变的量，如 pai 3.141592653…, 或在程序运行过程中不会改变的量</p>
+<p>举例，假如老男孩老师的年龄会变，那这就是个变量，但在一些情况下，他的年龄不会变了，那就是常量。在 Python 中没有一个专门的语法代表常量，程序员约定俗成用变量名全部大写代表常量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">AGE_OF_OLDBOY &#x3D; 56</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在 c 语言中有专门的常量定义语法，<code>const int count = 60;</code> 一旦定义为常量，更改即会报错</p>
+</blockquote>
+<h4 id="6-基础数据类型（初始）。"><a href="#6-基础数据类型（初始）。" class="headerlink" title="6. 基础数据类型（初始）。"></a>6. 基础数据类型（初始）。</h4><p>什么是数据类型？</p>
+<p>　　我们人类可以很容易的分清数字与字符的区别，但是计算机并不能呀，计算机虽然很强大，但从某种角度上看又很傻，除非你明确的告诉它，1 是数字，“汉” 是文字，否则它是分不清 1 和‘汉’的区别的，因此，在每个编程语言里都会有一个叫数据类型的东东，其实就是对常用的各种数据类型进行了明确的划分，你想让计算机进行数值运算，你就传数字给它，你想让他处理文字，就传字符串类型给他。Python 中常用的数据类型有多种，今天我们暂只讲 3 种， 数字、字符串、布尔类型</p>
+<p>6.1、整数类型（int）。</p>
+<p>int（整型）</p>
+<p>在 32 位机器上，整数的位数为 32 位，取值范围为 - 2<strong>31～2</strong>31-1，即 - 2147483648～2147483647</p>
+<p>在 64 位系统上，整数的位数为 64 位，取值范围为 - 2<strong>63～2</strong>63-1，即 - 9223372036854775808～9223372036854775807</p>
+<blockquote>
+<p>除了 int 之外， 其实还有 float 浮点型，复数型，但今天先不讲啦</p>
+</blockquote>
+<p>6.2、字符串类型（str）。</p>
+<p>在 Python 中，加了引号的字符都被认为是字符串！</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>name = “Alex Li” #双引号<br>age = “22”       #只要加引号就是字符串<br>age2 = 22          #int</p>
+<p>msg = ‘’’My name is taibai, I am 22 years old!’’’  #我擦，3个引号也可以</p>
+<p>hometown = ‘ShanDong’   #单引号也可以</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>那单引号、双引号、多引号有什么区别呢？ 让我大声告诉你，单双引号木有任何区别，只有下面这种情况 你需要考虑单双的配合</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">msg &#x3D; &quot;My name is Alex , I&#39;m 22 years old!&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>多引号什么作用呢？作用就是多行字符串必须用多引号</p>
+<p>msg = ‘’’<br>今天我想写首小诗，<br>歌颂我的同桌，<br>你看他那乌黑的短发，<br>好像一只炸毛鸡。<br>‘’’<br>print(msg)</p>
+<p>字符串拼接</p>
+<p>数字可以进行加减乘除等运算，字符串呢？让我大声告诉你，也能？what ? 是的，但只能进行 “相加” 和 “相乘” 运算。</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>name<br>‘Alex Li’<br>age<br>‘22’</p>
+<p>name + age  #相加其实就是简单拼接<br>‘Alex Li22’</p>
+<p>name * 10 #相乘其实就是复制自己多少次，再拼接在一起<br>‘Alex LiAlex LiAlex LiAlex LiAlex LiAlex LiAlex LiAlex LiAlex LiAlex Li’</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>注意，字符串的拼接只能是双方都是字符串，不能跟数字或其它类型拼接</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>type(name),type(age2)<br>(&lt;type ‘str’&gt;, &lt;type ‘int’&gt;)</p>
+<p>name<br>‘Alex Li’<br>age2<br>22<br>name + age2<br>Traceback (most recent call last):<br>  File “<stdin>“, line 1, in <module> TypeError: cannot concatenate ‘str’ and ‘int’ objects #错误提示数字 和 字符 不能拼接</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>6.3、布尔值（True，False）。</p>
+<p>布尔类型很简单，就两个值 ，一个 True (真)，一个 False (假), 主要用记逻辑判断</p>
+<p>但其实你们并不明白对么？ let me explain, 我现在有 2 个值 ， a=3, b=5 , 我说 a&gt;b 你说成立么？我们当然知道不成立，但问题是计算机怎么去描述这成不成立呢？或者说 a&lt; b 是成立，计算机怎么描述这是成立呢？</p>
+<p>没错，答案就是，用布尔类型</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>a=3<br>b=5</p>
+<p>a &gt; b #不成立就是False,即假<br>False</p>
+<p>a &lt; b #成立就是True, 即真<br>True</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h4 id="7-程序交互"><a href="#7-程序交互" class="headerlink" title="7. 程序交互"></a>7. 程序交互</h4><p>#!/usr/bin/env python # -<em>- coding: utf-8 -</em>-</p>
+<h1 id="将用户输入的内容赋值给-name-变量"><a href="#将用户输入的内容赋值给-name-变量" class="headerlink" title="将用户输入的内容赋值给 name 变量"></a>将用户输入的内容赋值给 name 变量</h1><p>name = input(“请输入用户名：”) # 打印输入的内容<br>print(name)</p>
+<p>执行脚本就会发现，程序会等待你输入姓名后再往下继续走。</p>
+<p>可以让用户输入多个信息，如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;usr&#x2F;bin&#x2F;env python</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"></span><br><span class="line">name &#x3D; input(&quot;What is your name?&quot;)</span><br><span class="line">age &#x3D; input(&quot;How old are you?&quot;)</span><br><span class="line">hometown &#x3D; input(&quot;Where is your hometown?&quot;) print(&quot;Hello &quot;,name , &quot;your are &quot;, age , &quot;years old, you came from&quot;,hometown)</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-流程控制之-–if。"><a href="#8-流程控制之-–if。" class="headerlink" title="8. 流程控制之 –if。"></a>8. 流程控制之 –if。</h4><p>　　假如把写程序比做走路，那我们到现在为止，一直走的都是直路，还没遇到过分叉口，想象现实中，你遇到了分叉口，然后你决定往哪拐必然是有所动机的。你要判断那条岔路是你真正要走的路，如果我们想让程序也能处理这样的判断怎么办？ 很简单，只需要在程序里预设一些条件判断语句，满足哪个条件，就走哪条岔路。这个过程就叫流程控制。</p>
+<p>if…else 语句</p>
+<p>单分支</p>
+<p>if 条件:<br>    满足条件后要执行的代码</p>
+<p>双分支</p>
+<p>“”” if 条件:<br>    满足条件执行代码<br>else:<br>    if条件不满足就走这段 “”” AgeOfOldboy = 48</p>
+<p>if AgeOfOldboy &gt; 50 : print(“Too old, time to retire..”) else: print(“还能折腾几年!”)</p>
+<p>缩进</p>
+<blockquote>
+<p>这里必须要插入这个缩进的知识点</p>
+</blockquote>
+<p>你会发现，上面的 if 代码里，每个条件的下一行都缩进了 4 个空格，这是为什么呢？这就是 Python 的一大特色，强制缩进，目的是为了让程序知道，每段代码依赖哪个条件，如果不通过缩进来区分，程序怎么会知道，当你的条件成立后，去执行哪些代码呢？</p>
+<p>在其它的语言里，大多通过 <code>&#123;&#125;</code> 来确定代码块，比如 C,C++,Java,Javascript 都是这样，看一个 JavaScript 代码的例子</p>
+<p>var age = 56<br>if ( age &lt; 50){<br>  console.log(“还能折腾”)<br>    console.log(‘可以执行多行代码’)<br>}else{<br>   console.log(‘太老了’)<br>}</p>
+<p>在有 <code>&#123;&#125;</code> 来区分代码块的情况下，缩进的作用就只剩下让代码变的整洁了。</p>
+<p>Python 是门超级简洁的语言，发明者定是觉得用 <code>&#123;&#125;</code> 太丑了，所以索性直接不用它，那怎么能区分代码块呢？答案就是强制缩进。</p>
+<p>Python 的缩进有以下几个原则:</p>
+<ul>
+<li>  顶级代码必须顶行写，即如果一行代码本身不依赖于任何条件，那它必须不能进行任何缩进</li>
+<li>  同一级别的代码，缩进必须一致</li>
+<li>  官方建议缩进用 4 个空格，当然你也可以用 2 个，如果你想被人笑话的话。</li>
+</ul>
+<p>多分支</p>
+<p>回到流程控制上来，if…else … 可以有多个分支条件</p>
+<p>if 条件:<br>    满足条件执行代码 elif 条件:<br>    上面的条件不满足就走这个 elif 条件:<br>    上面的条件不满足就走这个 elif 条件:<br>    上面的条件不满足就走这个 else:<br>    上面所有的条件不满足就走这段</p>
+<p>写个猜年龄的游戏吧</p>
+<p>age_of_oldboy = 48 guess = int(input(“&gt;&gt;:”)) if guess &gt; age_of_oldboy : print(“猜的太大了，往小里试试…”) elif guess &lt; age_of_oldboy : print(“猜的太小了，往大里试试…”) else: print(“恭喜你，猜对了…”)</p>
+<p>上面的例子，根据你输入的值不同，会最多得到 3 种不同的结果</p>
+<p>再来个匹配成绩的小程序吧，成绩有 ABCDE5 个等级，与分数的对应关系如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">A    90-100</span><br><span class="line">B    80-89</span><br><span class="line">C    60-79</span><br><span class="line">D    40-59</span><br><span class="line">E    0-39</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>要求用户输入 0-100 的数字后，你能正确打印他的对应成绩</p>
+<p>score = int(input(“输入分数:”)) if score &gt; 100: print(“我擦，最高分才100…”) elif score &gt;= 90: print(“A”) elif score &gt;= 80: print(“B”) elif score &gt;= 60: print(“C”) elif score &gt;= 40: print(“D”) else: print(“太笨了…E”)</p>
+<p>这里有个问题，就是当我输入 95 的时候 ，它打印的结果是 A, 但是 95 明明也大于第二个条件 <code>elif score &gt;=80:</code> 呀，为什么不打印 B 呢？这是因为代码是从上到下依次判断，只要满足一个，就不会再往下走啦，这一点一定要清楚呀！</p>
+<hr>
+<div align=center>
+发现更多更好玩的，欢迎关注我的微信公众号:fullstacker
+
+<p><img src="/img/qrcode.jpg"></p>
+</div>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">itgoyo</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://itgoyo.github.io/2019/09/26/Python%E5%9F%BA%E7%A1%80%E4%B8%80/">https://itgoyo.github.io/2019/09/26/Python%E5%9F%BA%E7%A1%80%E4%B8%80/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://itgoyo.github.io" target="_blank">一个二货程序员的日常编码</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Python/">Python</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2019/09/27/Python%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84%E7%9A%84%E8%AF%A6%E7%BB%86%E5%8C%BA%E5%88%AB/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Python列表和元组的详细区别</div></div></a></div><div class="next-post pull-right"><a href="/2019/09/25/%E6%88%91%E4%B8%AA%E4%BA%BAMac%E5%B8%B8%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">我个人Mac常用的软件推荐</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2019/09/27/Python列表和元组的详细区别/" title="Python列表和元组的详细区别"><img class="cover" src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/default_cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-09-27</div><div class="title">Python列表和元组的详细区别</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.imgur.com/DnNifwH.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">itgoyo</div><div class="author-info__description">出生不及赵甲第，努力应过陈浮生</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">78</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div><a class="button--animated" id="card-info-btn" href="https://github.com/itgoyo"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/itgoyo" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://www.instagram.com/itgoyo1991" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a><a class="social-icon" href="mailto:itgoyo@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://twitter.com/itgoyo" target="_blank" title=""><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.zhihu.com/people/mkosto" target="_blank" title=""><i class="fab fa-zhihu"></i></a><a class="social-icon" href="https://www.youtube.com/channel/UCpCzS_uKS1zzOAUjuuBNXDQ" target="_blank" title=""><i class="fab fa-youtube"></i></a><a class="social-icon" href="https://space.bilibili.com/12767066" target="_blank" title=""><i class="fas fa-film"></i></a><a class="social-icon" href="https://steamcommunity.com/id/itgoyo/" target="_blank" title=""><i class="fab fa-steam"></i></a><a class="social-icon" href="https://weibo.com/5459991185/profile" target="_blank" title=""><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://itgoyo.github.io/atom.xml" target="_blank" title=""><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎关注本人公众号：fullstacker <img class=" lazyloaded" data-src="/img/fullstacker.jpg" onerror="onerror=null,src=&quot;/img/friend_404.gif&quot;" width="180px" style="display:block;margin:0 auto" src="/img/fullstacker.jpg"></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%EF%BC%8CPython-%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">一，Python 介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-python-%E7%9A%84%E5%87%BA%E7%94%9F%E4%B8%8E%E5%BA%94%E7%94%A8"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">1. python 的出生与应用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-python-%E6%98%AF%E4%BB%80%E4%B9%88%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E3%80%82"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">2. python 是什么编程语言。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-python-%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9%E3%80%82"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">3. python 的优缺点。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-python-%E7%9A%84%E7%A7%8D%E7%B1%BB%E3%80%82"><span class="toc-number">1.0.0.4.</span> <span class="toc-text">4. python 的种类。</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-python-%E7%8E%AF%E5%A2%83"><span class="toc-number">2.</span> <span class="toc-text">二. python 环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89-python-%E5%9F%BA%E7%A1%80%E5%88%9D%E8%AF%86%E3%80%82"><span class="toc-number">3.</span> <span class="toc-text">三. python 基础初识。</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E8%BF%90%E8%A1%8C-python-%E4%BB%A3%E7%A0%81%E3%80%82"><span class="toc-number">3.0.0.1.</span> <span class="toc-text">1. 运行 python 代码。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E8%A7%A3%E9%87%8A%E5%99%A8%E3%80%82"><span class="toc-number">3.0.0.2.</span> <span class="toc-text">2. 解释器。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E6%B3%A8%E9%87%8A%E3%80%82"><span class="toc-number">3.0.0.3.</span> <span class="toc-text">3. 注释。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%8F%98%E9%87%8F"><span class="toc-number">3.0.0.4.</span> <span class="toc-text">4. 变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E5%B8%B8%E9%87%8F"><span class="toc-number">3.0.0.5.</span> <span class="toc-text">5. 常量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%88%E5%88%9D%E5%A7%8B%EF%BC%89%E3%80%82"><span class="toc-number">3.0.0.6.</span> <span class="toc-text">6. 基础数据类型（初始）。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E7%A8%8B%E5%BA%8F%E4%BA%A4%E4%BA%92"><span class="toc-number">3.0.0.7.</span> <span class="toc-text">7. 程序交互</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B0%86%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E7%9A%84%E5%86%85%E5%AE%B9%E8%B5%8B%E5%80%BC%E7%BB%99-name-%E5%8F%98%E9%87%8F"><span class="toc-number">4.</span> <span class="toc-text">将用户输入的内容赋值给 name 变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#8-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E4%B9%8B-%E2%80%93if%E3%80%82"><span class="toc-number">4.0.0.1.</span> <span class="toc-text">8. 流程控制之 –if。</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/11/05/%E5%A6%82%E4%BD%95%E8%AE%A9%E5%88%AB%E4%BA%BA%E5%AF%B9%E4%BA%A4%E4%BB%A3%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%8B%E6%83%85%E5%81%9A%E5%88%B0%E6%94%BE%E5%BF%83%EF%BC%9F/" title="如何让别人对交代给自己的事情做到放心？"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210724205710.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何让别人对交代给自己的事情做到放心？"/></a><div class="content"><a class="title" href="/2020/11/05/%E5%A6%82%E4%BD%95%E8%AE%A9%E5%88%AB%E4%BA%BA%E5%AF%B9%E4%BA%A4%E4%BB%A3%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%8B%E6%83%85%E5%81%9A%E5%88%B0%E6%94%BE%E5%BF%83%EF%BC%9F/" title="如何让别人对交代给自己的事情做到放心？">如何让别人对交代给自己的事情做到放心？</a><time datetime="2020-11-05T15:00:08.000Z" title="发表于 2020-11-05 23:00:08">2020-11-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/04/RSS%E6%89%93%E5%BC%80%E6%96%B0%E4%B8%96%E7%95%8C%E7%9A%84%E5%A4%A7%E9%97%A8/" title="RSS打开新世界的大门"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210724210420.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RSS打开新世界的大门"/></a><div class="content"><a class="title" href="/2020/11/04/RSS%E6%89%93%E5%BC%80%E6%96%B0%E4%B8%96%E7%95%8C%E7%9A%84%E5%A4%A7%E9%97%A8/" title="RSS打开新世界的大门">RSS打开新世界的大门</a><time datetime="2020-11-04T14:21:03.000Z" title="发表于 2020-11-04 22:21:03">2020-11-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/03/05/%E6%9C%89%E5%93%AA%E4%BA%9B%E5%86%B7%E9%97%A8%E4%BD%86%E6%98%AF%E9%9D%9E%E5%B8%B8%E5%80%BC%E5%BE%97%E6%8E%A8%E8%8D%90%E7%9A%84%E8%BD%AF%E4%BB%B6%EF%BC%9F/" title="有哪些冷门但是非常值得推荐的软件？"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210724211407.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="有哪些冷门但是非常值得推荐的软件？"/></a><div class="content"><a class="title" href="/2020/03/05/%E6%9C%89%E5%93%AA%E4%BA%9B%E5%86%B7%E9%97%A8%E4%BD%86%E6%98%AF%E9%9D%9E%E5%B8%B8%E5%80%BC%E5%BE%97%E6%8E%A8%E8%8D%90%E7%9A%84%E8%BD%AF%E4%BB%B6%EF%BC%9F/" title="有哪些冷门但是非常值得推荐的软件？">有哪些冷门但是非常值得推荐的软件？</a><time datetime="2020-03-05T04:28:03.000Z" title="发表于 2020-03-05 12:28:03">2020-03-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/01/19/Docker%E5%AE%B9%E5%99%A8%E9%80%A0%E5%8C%96%E9%92%9F%E7%A5%9E%E7%A7%80/" title="Docker容器造化钟神秀"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210725171907.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker容器造化钟神秀"/></a><div class="content"><a class="title" href="/2020/01/19/Docker%E5%AE%B9%E5%99%A8%E9%80%A0%E5%8C%96%E9%92%9F%E7%A5%9E%E7%A7%80/" title="Docker容器造化钟神秀">Docker容器造化钟神秀</a><time datetime="2020-01-19T03:48:50.000Z" title="发表于 2020-01-19 11:48:50">2020-01-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/01/17/Tmux%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="Tmux的使用教程"><img src="https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210724211941.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Tmux的使用教程"/></a><div class="content"><a class="title" href="/2020/01/17/Tmux%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="Tmux的使用教程">Tmux的使用教程</a><time datetime="2020-01-17T07:34:00.000Z" title="发表于 2020-01-17 15:34:00">2020-01-17</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://cdn.jsdelivr.net/gh/itgoyo/PicGoRes@master/img/20210205144322.png')"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2021 By itgoyo</div><div class="framework-info"><span>框架 </span><a href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'HzQ14MvDJNcJ4Y73LGzWkuKD-gzGzoHsz',
+      appKey: 'gPggWGa1wwwhXbzuhnSQyQDx',
+      placeholder: 'Please leave your footprints',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+      requiredFields: ["nick,mail"],
+      visitor: 
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
